@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getService, services } from "@/data/services";
+import { getService, services, type Service } from "@/data/services";
 import { PageBanner } from "@/components/site/PageBanner";
 import { OpeningHours } from "@/components/site/OpeningHours";
 import { AppointmentForm } from "@/components/site/AppointmentForm";
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetail() {
-  const { service } = Route.useLoaderData();
+  const { service } = Route.useLoaderData() as { service: Service };
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 4);
 
   return (
