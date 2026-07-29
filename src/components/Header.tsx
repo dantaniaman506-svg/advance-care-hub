@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, ChevronDown, Phone, MapPin, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { services } from "@/data/services";
 import { clinic, whatsappLink } from "@/data/clinic";
 
@@ -35,52 +35,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Top info bar */}
-      <div className="top-bar">
-        <div className="container-page flex flex-wrap items-center justify-between gap-2">
-          <div className="flex flex-wrap items-center gap-4 text-xs">
-            <a
-              href="https://www.google.com/maps?q=Shagun-11+Sector+11+Gandhinagar+Gujarat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
-            >
-              <MapPin className="h-3 w-3 shrink-0" />
-              <span className="hidden sm:inline">Sector 11, Gandhinagar, Gujarat</span>
-              <span className="sm:hidden">Gandhinagar</span>
-            </a>
-            <a
-              href={`mailto:${clinic.email}`}
-              className="hidden md:flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
-            >
-              <Mail className="h-3 w-3 shrink-0" />
-              {clinic.email}
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            <a
-              href={`tel:${clinic.phoneRaw}`}
-              className="flex items-center gap-1.5 text-white/90 hover:text-white font-medium transition-colors text-xs"
-            >
-              <Phone className="h-3 w-3" />
-              {clinic.phone}
-            </a>
-            {/* Social icons */}
-            <div className="hidden sm:flex items-center gap-2.5">
-              <a href="#" aria-label="Facebook" className="text-white/60 hover:text-white transition-colors">
-                <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              </a>
-              <a href="#" aria-label="Instagram" className="text-white/60 hover:text-white transition-colors">
-                <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-              </a>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-white/60 hover:text-white transition-colors">
-                <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.552 4.103 1.517 5.825L0 24l6.335-1.652A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.819 9.819 0 0 1-5.003-1.368l-.36-.214-3.726.975.999-3.631-.234-.374A9.786 9.786 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main header */}
       <header
         className={`sticky top-0 z-40 bg-white transition-shadow ${
@@ -180,13 +134,19 @@ export default function Header() {
         >
           <div className="absolute inset-0 bg-black/50" />
           <div
-            className="absolute right-0 top-0 h-full w-[300px] bg-white flex flex-col shadow-2xl overflow-y-auto"
+            className="absolute left-0 top-0 h-full w-[300px] bg-white flex flex-col shadow-2xl overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Panel header */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-              <span className="font-bold text-[#1A202C]">Menu</span>
-              <button onClick={close} className="text-gray-500 hover:text-[#A93539]">
+              <Link to="/" onClick={close} className="flex flex-col leading-none">
+                <span className="font-bold text-[1rem]">
+                  <span className="text-[#1A202C]">Advance </span>
+                  <span style={{ color: "#A93539" }}>Speech</span>
+                </span>
+                <span className="text-[0.7rem] text-[#54595F] mt-0.5">and Hearing Clinic</span>
+              </Link>
+              <button onClick={close} className="text-gray-500 hover:text-[#A93539] transition-colors">
                 <X className="h-5 w-5" />
               </button>
             </div>

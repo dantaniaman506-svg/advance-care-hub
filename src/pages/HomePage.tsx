@@ -33,15 +33,15 @@ export default function HomePage() {
 
         {/* Text content */}
         <div className="container-page relative z-10">
-          <div className="py-14 lg:py-24" style={{ maxWidth: "56%" }}>
+          <div className="py-14 lg:py-24 w-[62%] sm:w-[58%] lg:w-[52%]">
             <p className="eyebrow mb-3">Welcome To</p>
             <h1
-              className="text-3xl sm:text-4xl lg:text-[3rem] font-bold leading-tight mb-5"
+              className="text-[1.75rem] sm:text-4xl lg:text-[3rem] font-bold leading-tight mb-5"
               style={{ color: "#A93539" }}
             >
               Advance Speech and Hearing Clinic
             </h1>
-            <p className="text-sm sm:text-base text-[#4A5568] leading-relaxed mb-8 max-w-sm">
+            <p className="text-sm sm:text-base text-[#4A5568] leading-relaxed mb-8">
               Trusted audiology and speech therapy care across Gujarat —
               accurate hearing assessments, advanced hearing aid fittings,
               and complete auditory rehabilitation under one roof.
@@ -226,62 +226,72 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
-            <p className="eyebrow mb-3">Our Doctor</p>
+            <p className="eyebrow mb-3">Our Doctors</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A202C] mb-4">
-              Meet Our Specialist
+              Trusted Specialist Doctors
             </h2>
             <p className="text-[#4A5568] leading-relaxed mb-4">
-              Dr. Naim A. Mansuri is a Consultant Audiologist with over 35 years
-              of clinical experience across Gujarat. He specialises in precise
-              audiological diagnosis, personalised hearing aid fitting, cochlear
-              implant candidacy assessment, and auditory rehabilitation.
+              At Advance Speech and Hearing Clinic, we believe that every
+              individual deserves the full richness of sound. Since our
+              inception, our mission has been to empower lives through improved
+              hearing health — because we know that better hearing leads to
+              better living.
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-6">
-              His patient-centred approach — combining state-of-the-art
-              diagnostic tools with compassionate care — has helped thousands of
-              patients across all age groups regain clear hearing and confident
-              communication.
+              Led by Dr. Naim A. Mansuri — Consultant Audiologist with over
+              35 years of clinical experience — our team serves patients of all
+              ages across 4 locations in Gujarat with compassionate, evidence-based
+              care.
             </p>
             <Link to="/doctors" className="btn-primary">
-              More About Us <ArrowRight className="h-4 w-4" />
+              More About Us
             </Link>
           </Reveal>
           <Reveal delay={120}>
             <div
-              className="flex flex-col items-center justify-center py-14 px-8 text-white"
+              className="p-8 text-white"
               style={{ backgroundColor: "#2D3748" }}
             >
+              {/* Doctor name & title */}
               <div
-                className="w-24 h-24 flex items-center justify-center mb-5 text-4xl"
-                style={{ backgroundColor: "#A93539" }}
+                className="pb-6 mb-6"
+                style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}
               >
-                👨‍⚕️
+                <h3 className="text-2xl font-bold text-white">
+                  Dr. Naim A. Mansuri
+                </h3>
+                <p style={{ color: "#A93539" }} className="text-sm font-medium mt-1">
+                  Consultant Audiologist
+                </p>
+                <p className="text-white/60 text-sm mt-3 leading-relaxed">
+                  M.Sc. (Audiology & Speech-Language Pathology) •
+                  Registered Audiologist • Gujarat
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white text-center">
-                Dr. Naim A. Mansuri
-              </h3>
-              <p className="text-white/60 text-sm mt-1 text-center">
-                Consultant Audiologist
-              </p>
-              <div className="mt-6 grid grid-cols-2 gap-4 w-full text-center">
-                <div
-                  className="py-3"
-                  style={{ borderTop: "2px solid #A93539" }}
-                >
-                  <div className="text-2xl font-bold text-white">35+</div>
-                  <div className="text-xs text-white/50 mt-1">
-                    Years Experience
+              {/* Stats grid */}
+              <div className="grid grid-cols-2 gap-5">
+                {[
+                  { value: "35+", label: "Years Experience" },
+                  { value: "1,200+", label: "Patients Treated" },
+                  { value: "4", label: "Clinic Locations" },
+                  { value: "7", label: "Days a Week" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="text-center py-4"
+                    style={{ borderTop: "2px solid #A93539" }}
+                  >
+                    <div
+                      className="text-2xl font-bold"
+                      style={{ color: "#A93539" }}
+                    >
+                      {item.value}
+                    </div>
+                    <div className="text-xs text-white/50 mt-1 uppercase tracking-wide">
+                      {item.label}
+                    </div>
                   </div>
-                </div>
-                <div
-                  className="py-3"
-                  style={{ borderTop: "2px solid #A93539" }}
-                >
-                  <div className="text-2xl font-bold text-white">1,200+</div>
-                  <div className="text-xs text-white/50 mt-1">
-                    Patients Treated
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </Reveal>
