@@ -1,129 +1,243 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-
   --font-sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
   --font-slab: "Roboto Slab", Georgia, serif;
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary-hover: var(--primary-hover);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-navy: var(--navy);
-  --color-navy-foreground: var(--navy-foreground);
-  --color-section: var(--section-bg);
-  --color-card-soft: var(--card-soft);
-  --color-info: var(--info);
-}
-
-:root {
-  --radius: 0.625rem;
-
-  /* Brand palette (from client brief) */
-  --background: oklch(0.977 0.006 258);           /* #F1F4F9 page bg */
-  --foreground: oklch(0.24 0.03 260);             /* #1A202C navy */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.03 260);
-  --card-soft: oklch(0.985 0.005 255);            /* #F7FAFC */
-  --section-bg: oklch(0.965 0.008 255);           /* #EDF2F7 */
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.03 260);
-
-  --primary: oklch(0.5 0.135 24);                 /* #A93539 red */
-  --primary-foreground: oklch(1 0 0);
-  --primary-hover: oklch(0.47 0.14 24);           /* #A3343B */
-
-  --secondary: oklch(0.5 0.008 260);              /* #54595F */
-  --secondary-foreground: oklch(1 0 0);
-
-  --muted: oklch(0.965 0.008 255);
-  --muted-foreground: oklch(0.54 0.008 260);      /* #7A7A7A */
-
-  --accent: oklch(0.94 0.01 255);
-  --accent-foreground: oklch(0.24 0.03 260);
-
-  --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: oklch(1 0 0);
-
-  --border: oklch(0.9 0.008 255);
-  --input: oklch(0.9 0.008 255);
-  --ring: oklch(0.5 0.135 24);
-
-  --navy: oklch(0.24 0.03 260);                   /* #1A202C */
-  --navy-foreground: oklch(1 0 0);
-  --info: oklch(0.55 0.14 250);                   /* CTA blue banner */
+  --color-background: #F1F4F9;
+  --color-foreground: #1A202C;
+  --color-card: #ffffff;
+  --color-card-foreground: #1A202C;
+  --color-card-soft: #F7FAFC;
+  --color-section: #EDF2F7;
+  --color-primary: #A93539;
+  --color-primary-hover: #8B2B2E;
+  --color-primary-foreground: #ffffff;
+  --color-navy: #1A202C;
+  --color-navy-foreground: #ffffff;
+  --color-secondary: #54595F;
+  --color-muted: #EDF2F7;
+  --color-muted-foreground: #7A7A7A;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #A93539;
+  --color-dark-gray: #2D3748;
+  --color-mid-gray: #4A5568;
+  --color-light-gray: #718096;
+  --color-white: #ffffff;
 }
 
 @layer base {
   * {
+    box-sizing: border-box;
     border-color: var(--color-border);
   }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5 {
     font-family: var(--font-sans);
     font-weight: 600;
     color: var(--color-navy);
-    letter-spacing: -0.01em;
-  }
-  .eyebrow {
-    font-family: var(--font-slab);
-    font-weight: 400;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    font-size: 0.72rem;
-    color: var(--color-primary);
+    line-height: 1.2;
   }
 }
 
-@utility container-page {
+/* Utility classes */
+.container-page {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
 
-@utility reveal {
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-primary);
+}
+
+/* Reveal animations */
+.reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  &.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Hero slider */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Service card */
+.service-card {
+  background: #fff;
+  border-left: 4px solid var(--color-primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(169, 53, 57, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Button styles - NO rounded corners */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  border-radius: 0;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  border-radius: 0;
+}
+.btn-navy:hover {
+  background-color: #2D3748;
+}
+
+/* Input/Select styles */
+.form-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-foreground);
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.2s;
+}
+.form-input:focus {
+  border-color: var(--color-primary);
+}
+
+/* Top info bar */
+.top-bar {
+  background-color: var(--color-navy);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8rem;
+  padding: 0.45rem 0;
+}
+
+/* Nav */
+.nav-link {
+  color: var(--color-navy);
+  font-weight: 500;
+  font-size: 0.92rem;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+/* Footer */
+.footer-link {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.87rem;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: #fff;
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 50;
+}
+.mobile-menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(320px, 90vw);
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.mobile-menu-panel.open {
+  transform: translateX(0);
 }
