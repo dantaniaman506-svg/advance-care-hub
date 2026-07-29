@@ -5,14 +5,15 @@ import { Wordmark } from "./Wordmark";
 import { services } from "@/data/services";
 import { clinic } from "@/data/clinic";
 
-const nav = [
+type NavItem = { to: string; label: string; hasSub?: boolean };
+const nav: NavItem[] = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services", hasSub: true },
   { to: "/doctors", label: "Doctors" },
   { to: "/about", label: "About Us" },
   { to: "/locations", label: "Locations" },
   { to: "/contact", label: "Contact Us" },
-] as const;
+];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
