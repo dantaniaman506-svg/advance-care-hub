@@ -10,7 +10,7 @@ const stats: Stat[] = [
   { value: 1200, suffix: "+", label: "Happy Patients" },
   { value: 20, suffix: "", label: "Specialist Doctors" },
   { value: 35, suffix: "", label: "Years Experience" },
-  { value: 150, suffix: "K+", label: "Problems Solved" },
+  { value: 150, suffix: "K", label: "Problem Solve" },
 ];
 
 function useCountUp(target: number, duration = 2000, started: boolean) {
@@ -22,7 +22,6 @@ function useCountUp(target: number, duration = 2000, started: boolean) {
     const timer = setInterval(() => {
       const elapsed = Date.now() - start;
       const progress = Math.min(elapsed / duration, 1);
-      // ease out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.floor(eased * target));
       if (progress >= 1) {
@@ -40,12 +39,15 @@ function StatItem({ stat, started }: { stat: Stat; started: boolean }) {
   const count = useCountUp(stat.value, 2200, started);
 
   return (
-    <div className="text-center px-4 py-6">
-      <div className="text-4xl lg:text-5xl font-bold text-white mb-1">
+    <div className="text-center py-8 px-4">
+      <div
+        className="text-5xl lg:text-6xl font-bold leading-none"
+        style={{ color: "#A93539" }}
+      >
         {count.toLocaleString()}
-        <span style={{ color: "#A93539" }}>{stat.suffix}</span>
+        {stat.suffix}
       </div>
-      <div className="text-sm font-medium uppercase tracking-wider text-white/70 mt-1">
+      <div className="text-xs font-semibold uppercase tracking-widest text-[#718096] mt-3">
         {stat.label}
       </div>
     </div>
@@ -73,16 +75,15 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      style={{ backgroundColor: "#2D3748" }}
-      className="py-4"
-    >
+    <section ref={ref} className="py-6 bg-white">
       <div className="container-page">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
-          {stats.map((stat) => (
-            <StatItem key={stat.label} stat={stat} started={started} />
-          ))}
+        {/* On mobile: single column stacked. On lg: 4-col row. */}
+        <div className="max-w-sm mx-auto lg:max-w-none">
+          <div className="grid grid-cols-1 lg:grid-cols-4 divide-y divide-gray-100 lg:divide-y-0 lg:divide-x lg:divide-gray-100">
+            {stats.map((stat) => (
+              <StatItem key={stat.label} stat={stat} started={started} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
