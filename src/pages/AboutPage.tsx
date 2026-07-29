@@ -1,4 +1,4 @@
-import { CheckCircle, Award, Users, MapPin } from "lucide-react";
+import { CheckCircle, Award, Users, MapPin, Microscope, Calendar, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
@@ -91,17 +91,17 @@ export default function AboutPage() {
                 desc: "Conveniently located across Gandhinagar, Patan, Ahmedabad and Surendranagar for easy access.",
               },
               {
-                icon: <span className="text-2xl">🔬</span>,
+                icon: <Microscope className="h-7 w-7 text-white" />,
                 title: "Advanced Technology",
                 desc: "We use the latest calibrated audiological equipment to ensure accurate diagnoses every time.",
               },
               {
-                icon: <span className="text-2xl">📅</span>,
+                icon: <Calendar className="h-7 w-7 text-white" />,
                 title: "Open All 7 Days",
                 desc: "We are open every day of the week, closing at 7:00 PM, to fit around your schedule.",
               },
               {
-                icon: <span className="text-2xl">💚</span>,
+                icon: <Heart className="h-7 w-7 text-white" />,
                 title: "Caring Environment",
                 desc: "Our clinic is designed to be welcoming, calm, and accessible for patients of all ages.",
               },

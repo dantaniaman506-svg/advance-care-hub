@@ -85,7 +85,7 @@ export default function Header() {
                           className="flex items-center gap-2 px-4 py-2.5 text-sm text-[#2D3748] hover:bg-red-50 hover:text-[#A93539] transition-colors"
                           onClick={() => setSubOpen(false)}
                         >
-                          <span>{s.icon}</span>
+                          <span style={{ color: "#A93539", fontSize: "0.6rem" }}>▶</span>
                           {s.title}
                         </Link>
                       ))}
@@ -176,7 +176,7 @@ export default function Header() {
                             className="flex items-center gap-2 px-2 py-2 text-sm text-[#54595F] hover:text-[#A93539] transition-colors"
                             onClick={close}
                           >
-                            <span>{s.icon}</span>
+                            <span style={{ color: "#A93539", fontSize: "0.6rem" }}>▶</span>
                             {s.title}
                           </Link>
                         ))}

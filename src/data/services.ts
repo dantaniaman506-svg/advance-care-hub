@@ -11,7 +11,7 @@ export const services: Service[] = [
   {
     slug: "hearing-assessments",
     title: "Hearing Assessments",
-    icon: "🔊",
+    icon: "",
     oneLiner:
       "Detailed hearing tests for children and adults to accurately measure hearing ability and detect problems early.",
     bullets: [
@@ -42,7 +42,7 @@ export const services: Service[] = [
   {
     slug: "hearing-aids",
     title: "Hearing Aid Fitting",
-    icon: "👂",
+    icon: "",
     oneLiner:
       "Advanced digital hearing aids fitted and programmed for your specific hearing profile.",
     bullets: [
@@ -66,7 +66,7 @@ export const services: Service[] = [
   {
     slug: "speech-therapy",
     title: "Speech Therapy",
-    icon: "🗣",
+    icon: "",
     oneLiner:
       "Evidence-based speech and language therapy for children and adults with communication difficulties.",
     bullets: [
@@ -90,7 +90,7 @@ export const services: Service[] = [
   {
     slug: "cochlear-implants",
     title: "Cochlear Implant Support",
-    icon: "🏥",
+    icon: "",
     oneLiner:
       "Pre-implant evaluation, post-implant mapping, and rehabilitation services for cochlear implant candidates and recipients.",
     bullets: [
@@ -113,7 +113,7 @@ export const services: Service[] = [
   {
     slug: "tinnitus-management",
     title: "Tinnitus Management",
-    icon: "🔔",
+    icon: "",
     oneLiner:
       "Specialist assessment and evidence-based management plans for tinnitus and hyperacusis.",
     bullets: [
@@ -136,7 +136,7 @@ export const services: Service[] = [
   {
     slug: "hearing-aid-repair-maintenance",
     title: "Hearing Aid Repair & Maintenance",
-    icon: "🔧",
+    icon: "",
     oneLiner:
       "Servicing and maintenance for hearing aids across major brands, keeping devices working at their best.",
     bullets: [

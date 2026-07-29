@@ -105,7 +105,9 @@ export default function AppointmentPage() {
                 </h2>
                 {submitted ? (
                   <div className="py-12 text-center">
-                    <div className="text-5xl mb-4">✅</div>
+                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: "#A93539" }}>
+                      <CheckCircle className="h-8 w-8 text-white" />
+                    </div>
                     <h3 className="text-xl font-bold text-[#1A202C] mb-2">Booking Request Sent!</h3>
                     <p className="text-[#54595F] text-sm max-w-md mx-auto mb-1">
                       Your appointment request has been sent to our WhatsApp. We'll confirm your
@@ -215,7 +217,7 @@ export default function AppointmentPage() {
                           <option value="">— Select a service (optional) —</option>
                           {services.map((s) => (
                             <option key={s.slug} value={s.title}>
-                              {s.icon} {s.title}
+                              {s.title}
                             </option>
                           ))}
                         </select>

@@ -21,10 +21,10 @@ export default function DoctorsPage() {
               style={{ backgroundColor: "#2D3748" }}
             >
               <div
-                className="w-28 h-28 flex items-center justify-center mb-5 text-5xl"
+                className="w-28 h-28 flex items-center justify-center mb-5"
                 style={{ backgroundColor: "#A93539" }}
               >
-                👨‍⚕️
+                <span className="text-3xl font-bold text-white tracking-wide">NM</span>
               </div>
               <h2 className="text-2xl font-bold text-white">Dr. Naim A. Mansuri</h2>
               <p className="text-white/60 mt-1 text-sm">Consultant Audiologist</p>

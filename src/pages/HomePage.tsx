@@ -59,36 +59,38 @@ export default function HomePage() {
       </section>
 
       {/* ── CALL US + OPENING HOURS ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2">
-        {/* Call Us */}
-        <div
-          style={{ backgroundColor: "#A93539" }}
-          className="p-7 text-white text-center"
-        >
-          <p className="text-sm font-medium text-white/80 mb-3">Call Us</p>
-          <a
-            href={`tel:${clinic.phoneRaw}`}
-            className="flex items-center justify-center gap-3 text-2xl font-bold hover:opacity-90 transition-opacity"
+      <div className="py-6" style={{ backgroundColor: "#EDF2F7" }}>
+        <div className="container-page grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Call Us */}
+          <div
+            style={{ backgroundColor: "#A93539" }}
+            className="p-7 text-white text-center"
           >
-            <Phone className="h-6 w-6 shrink-0" />
-            {clinic.phone}
-          </a>
-          <p className="text-sm text-white/70 mt-2">Quick Response</p>
-        </div>
-        {/* Opening Hours */}
-        <div
-          style={{ backgroundColor: "#1A202C" }}
-          className="p-7 text-white text-center"
-        >
-          <p className="text-sm font-medium text-white/80 mb-3">Opening Hours</p>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-center gap-8 border-b border-white/10 pb-2">
-              <span className="text-white/70">Mon – Sun</span>
-              <span className="font-semibold">10:00 AM – 7:00 PM</span>
-            </div>
-            <div className="flex justify-center gap-8 text-white/50 text-xs">
-              <span>Public Holidays</span>
-              <span>Check with us</span>
+            <p className="text-sm font-medium text-white/80 mb-3">Call Us</p>
+            <a
+              href={`tel:${clinic.phoneRaw}`}
+              className="flex items-center justify-center gap-3 text-2xl font-bold hover:opacity-90 transition-opacity"
+            >
+              <Phone className="h-6 w-6 shrink-0" />
+              {clinic.phone}
+            </a>
+            <p className="text-sm text-white/70 mt-2">Quick Response</p>
+          </div>
+          {/* Opening Hours */}
+          <div
+            style={{ backgroundColor: "#1A202C" }}
+            className="p-7 text-white text-center"
+          >
+            <p className="text-sm font-medium text-white/80 mb-3">Opening Hours</p>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-center gap-8 border-b border-white/10 pb-2">
+                <span className="text-white/70">Mon – Sun</span>
+                <span className="font-semibold">10:00 AM – 7:00 PM</span>
+              </div>
+              <div className="flex justify-center gap-8 text-white/50 text-xs">
+                <span>Public Holidays</span>
+                <span>Check with us</span>
+              </div>
             </div>
           </div>
         </div>
@@ -386,22 +388,18 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 {
-                  icon: "🏥",
                   title: "4 Locations",
                   desc: "Gandhinagar, Patan, Ahmedabad & Surendranagar",
                 },
                 {
-                  icon: "📅",
                   title: "Open 7 Days",
                   desc: "We are open every day of the week",
                 },
                 {
-                  icon: "👨‍⚕️",
                   title: "Expert Doctor",
                   desc: "Dr. Naim A. Mansuri — 35+ years experience",
                 },
                 {
-                  icon: "✅",
                   title: "All Ages",
                   desc: "Serving infants, children, adults & seniors",
                 },
@@ -414,7 +412,6 @@ export default function HomePage() {
                     borderLeft: "3px solid #A93539",
                   }}
                 >
-                  <div className="text-2xl mb-2">{item.icon}</div>
                   <h4 className="font-bold text-white text-sm mb-1">
                     {item.title}
                   </h4>

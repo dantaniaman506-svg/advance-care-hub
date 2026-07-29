@@ -138,10 +138,10 @@ export default function ContactPage() {
               <div className="service-card p-8 bg-white">
                 <h3 className="text-xl font-bold text-[#1A202C] mb-6">Send Us a Message</h3>
                 {submitted ? (
-                  <div
-                    className="py-12 text-center"
-                  >
-                    <div className="text-5xl mb-4">✅</div>
+                  <div className="py-12 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: "#A93539" }}>
+                      <CheckCircle className="h-8 w-8 text-white" />
+                    </div>
                     <h4 className="text-xl font-bold text-[#1A202C] mb-2">Message Sent!</h4>
                     <p className="text-[#54595F] text-sm">
                       Thank you for reaching out. We'll get back to you shortly on{" "}
