@@ -118,17 +118,20 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile menu overlay */}
-      {menuOpen && (
+      {/* Mobile menu overlay — always mounted, animated in/out */}
+      <div
+        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={close}
+      >
+        <div className="absolute inset-0 bg-black/50" />
         <div
-          className="fixed inset-0 z-50 lg:hidden"
-          onClick={close}
+          className={`absolute left-0 top-0 h-full w-[300px] bg-white flex flex-col shadow-2xl overflow-y-auto transition-transform duration-300 ease-out ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
         >
-          <div className="absolute inset-0 bg-black/50" />
-          <div
-            className="absolute left-0 top-0 h-full w-[300px] bg-white flex flex-col shadow-2xl overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
             {/* Panel header */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
               <Link to="/" onClick={close} className="flex flex-col leading-none">
@@ -221,7 +224,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-      )}
     </>
   );
 }

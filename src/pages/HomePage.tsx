@@ -222,8 +222,8 @@ export default function HomePage() {
       {/* ── CTA BANNER ── */}
       <section style={{ backgroundColor: "#A93539" }} className="py-12">
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="text-white text-center sm:text-left">
-            <h3 className="text-2xl font-bold mb-1">
+          <div className="text-center sm:text-left">
+            <h3 className="text-2xl font-bold mb-1 text-white">
               Book a Free Hearing Consultation
             </h3>
             <p className="text-white/80 text-sm">
