@@ -240,6 +240,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── HEARING AID CARE ── */}
+      <section className="py-16 bg-white">
+        <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
+          <Reveal>
+            <div className="overflow-hidden rounded-sm shadow-lg">
+              <img
+                src="/images/hearing-aid-hand.png"
+                alt="Hearing aid being fitted by a hearing care specialist"
+                className="w-full h-full object-cover"
+                style={{ aspectRatio: "4/3" }}
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="eyebrow mb-3">Personalised Hearing Care</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A202C] mb-5">
+              The Right Hearing Aid for Your Lifestyle
+            </h2>
+            <p className="text-[#4A5568] leading-relaxed mb-5">
+              Every hearing journey is different. Our audiology team helps you
+              choose, fit, and fine-tune the right digital hearing aid for your
+              hearing needs, comfort, and daily routine.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3 mb-7">
+              {[
+                "Speech clarity",
+                "Easy phone conversations",
+                "Comfortable fitting",
+                "Long-term support",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="px-4 py-3 text-sm font-medium text-[#2D3748]"
+                  style={{
+                    backgroundColor: "#F7FAFC",
+                    borderLeft: "3px solid #A93539",
+                  }}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+            <Link to="/services/hearing-aids" className="btn-primary">
+              Explore Hearing Aid Care
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── SERVICES ── */}
       <section className="py-16 bg-white">
         <div className="container-page">

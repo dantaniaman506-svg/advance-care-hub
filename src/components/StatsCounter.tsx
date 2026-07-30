@@ -4,7 +4,7 @@ import AnimatedCount from "@/components/AnimatedCount";
 const stats = [
   { value: 1200, suffix: "+", label: "Happy Patients" },
   { value: 20, suffix: "", label: "Specialist Doctors" },
-  { value: 35, suffix: "", label: "Years Experience" },
+  { value: 6, suffix: "", label: "Clinic Locations" },
   { value: 150, suffix: "K", label: "Problem Solved" },
 ];
 

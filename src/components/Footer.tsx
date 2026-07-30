@@ -73,8 +73,8 @@ export default function Footer() {
               <img
                 src="/images/logo-wide.png"
                 alt="Advance Speech and Hearing Clinic"
-                className="h-24 w-auto object-contain"
-                style={{ maxWidth: 260 }}
+                className="h-20 w-auto object-contain"
+                style={{ maxWidth: 225 }}
               />
             </div>
             <p className="text-sm text-white/65 leading-relaxed mb-5">

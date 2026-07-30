@@ -41,14 +41,14 @@ export default function Header() {
           scrolled ? "shadow-md" : "shadow-sm"
         }`}
       >
-        <div className="container-page flex items-center justify-between h-[70px]">
+        <div className="container-page flex items-center justify-between h-[76px]">
           {/* Logo image */}
           <Link to="/" className="flex items-center" onClick={close}>
             <img
               src="/images/logo-wide.png"
               alt="Advance Speech and Hearing Clinic"
-              className="h-16 w-auto object-contain"
-              style={{ maxWidth: 230 }}
+              className="h-14 w-auto object-contain"
+              style={{ maxWidth: 205 }}
             />
           </Link>
 
@@ -137,8 +137,8 @@ export default function Header() {
                 <img
                   src="/images/logo-wide.png"
                   alt="Advance Speech and Hearing Clinic"
-                  className="h-14 w-auto object-contain"
-                  style={{ maxWidth: 190 }}
+                  className="h-12 w-auto object-contain"
+                  style={{ maxWidth: 175 }}
                 />
               </Link>
               <button onClick={close} className="text-gray-500 hover:text-[#A93539] transition-colors">

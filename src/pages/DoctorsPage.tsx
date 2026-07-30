@@ -33,9 +33,9 @@ export default function DoctorsPage() {
               <div className="grid grid-cols-2 gap-6 w-full text-center">
                 <div>
                   <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
-                    <AnimatedCount value={35} suffix="+" />
+                    <AnimatedCount value={7} />
                   </div>
-                  <div className="text-xs text-white/50 mt-1">Years Experience</div>
+                  <div className="text-xs text-white/50 mt-1">Days a Week</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
