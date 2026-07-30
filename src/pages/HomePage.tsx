@@ -12,48 +12,62 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section
-        className="relative overflow-hidden"
-        style={{ backgroundColor: "#EDF2F7", minHeight: 500 }}
+        className="relative overflow-hidden flex items-center justify-center"
+        style={{ minHeight: 580 }}
       >
-        {/* Image — always visible on the right side (mobile + desktop) */}
-        <div
-          className="absolute right-0 top-0 bottom-0"
-          style={{ width: "55%" }}
-        >
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0">
           <HeroSlider className="h-full w-full" />
-          {/* Gradient fade from section bg into the image */}
+          {/* Ice-blue tint over the whole image */}
           <div
-            className="absolute inset-y-0 left-0 z-10"
-            style={{
-              width: "45%",
-              background: "linear-gradient(to right, #EDF2F7 0%, transparent 100%)",
-            }}
+            className="absolute inset-0"
+            style={{ background: "rgba(219, 234, 254, 0.22)" }}
           />
         </div>
 
-        {/* Text content */}
-        <div className="container-page relative z-10">
-          <div className="py-14 lg:py-24 w-[62%] sm:w-[58%] lg:w-[52%]">
-            <p className="eyebrow mb-3">Welcome To</p>
+        {/* Centered frosted-glass text panel */}
+        <div className="relative z-10 flex items-center justify-center w-full py-20 px-4">
+          <div
+            className="text-center max-w-lg px-8 py-12"
+            style={{
+              background: "rgba(237, 242, 247, 0.84)",
+              backdropFilter: "blur(6px)",
+              WebkitBackdropFilter: "blur(6px)",
+            }}
+          >
+            <p
+              className="eyebrow hero-anim"
+              style={{ animationDelay: "0.08s" }}
+            >
+              Welcome To
+            </p>
             <h1
-              className="text-[1.75rem] sm:text-4xl lg:text-[3rem] font-bold leading-tight mb-5"
-              style={{ color: "#A93539" }}
+              className="text-[1.9rem] sm:text-[2.6rem] lg:text-[3rem] font-bold leading-tight mt-2 mb-4 hero-anim"
+              style={{ color: "#A93539", animationDelay: "0.22s" }}
             >
               Advance Speech and Hearing Clinic
             </h1>
-            <p className="text-sm sm:text-base text-[#4A5568] leading-relaxed mb-8">
+            <p
+              className="text-sm sm:text-base text-[#4A5568] leading-relaxed mb-8 hero-anim"
+              style={{ animationDelay: "0.38s" }}
+            >
               Trusted audiology and speech therapy care across Gujarat —
               accurate hearing assessments, advanced hearing aid fittings,
               and complete auditory rehabilitation under one roof.
             </p>
-            <a
-              href={whatsappLink("Hello! I want to book a consultation.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
+            <div
+              className="hero-anim"
+              style={{ animationDelay: "0.52s" }}
             >
-              Book Consultancy
-            </a>
+              <a
+                href={whatsappLink("Hello! I want to book a consultation.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Book Consultancy
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -107,22 +107,14 @@ export default function Header() {
             )}
           </nav>
 
-          {/* CTA + Hamburger */}
-          <div className="flex items-center gap-2">
-            <Link
-              to="/appointment"
-              className="hidden md:inline-flex btn-primary text-sm"
-            >
-              Make Appointment
-            </Link>
-            <button
-              className="lg:hidden flex items-center justify-center w-10 h-10 text-[#1A202C] hover:text-[#A93539] transition-colors"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-            >
-              {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+          {/* Hamburger (mobile only) */}
+          <button
+            className="lg:hidden flex items-center justify-center w-10 h-10 text-[#1A202C] hover:text-[#A93539] transition-colors"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
+            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </header>
 
