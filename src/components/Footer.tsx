@@ -32,10 +32,10 @@ const footerAddresses = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#1A202C", color: "rgba(255,255,255,0.8)" }}>
+    <footer style={{ background: "linear-gradient(145deg, #111827 0%, #26344A 55%, #1A202C 100%)", color: "rgba(255,255,255,0.8)" }}>
 
       {/* Addresses strip */}
-      <div style={{ backgroundColor: "#A93539" }} className="py-8">
+      <div style={{ background: "linear-gradient(90deg, #8B2B2E 0%, #A93539 52%, #B84448 100%)" }} className="py-8">
         <div className="container-page">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {footerAddresses.map((loc) => (
@@ -71,10 +71,10 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src="/images/logo.png"
+                src="/images/logo-wide.png"
                 alt="Advance Speech and Hearing Clinic"
-                className="h-14 w-auto object-contain"
-                style={{ filter: "brightness(0) invert(1)", maxWidth: 160 }}
+                className="h-24 w-auto object-contain"
+                style={{ maxWidth: 260 }}
               />
             </div>
             <p className="text-sm text-white/65 leading-relaxed mb-5">

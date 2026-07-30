@@ -45,10 +45,10 @@ export default function Header() {
           {/* Logo image */}
           <Link to="/" className="flex items-center" onClick={close}>
             <img
-              src="/images/logo.png"
+              src="/images/logo-wide.png"
               alt="Advance Speech and Hearing Clinic"
-              className="h-12 w-auto object-contain"
-              style={{ maxWidth: 180 }}
+              className="h-16 w-auto object-contain"
+              style={{ maxWidth: 230 }}
             />
           </Link>
 
@@ -135,10 +135,10 @@ export default function Header() {
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
               <Link to="/" onClick={close}>
                 <img
-                  src="/images/logo.png"
+                  src="/images/logo-wide.png"
                   alt="Advance Speech and Hearing Clinic"
-                  className="h-10 w-auto object-contain"
-                  style={{ maxWidth: 160 }}
+                  className="h-14 w-auto object-contain"
+                  style={{ maxWidth: 190 }}
                 />
               </Link>
               <button onClick={close} className="text-gray-500 hover:text-[#A93539] transition-colors">

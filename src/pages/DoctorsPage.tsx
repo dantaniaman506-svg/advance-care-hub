@@ -2,6 +2,7 @@ import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
+import AnimatedCount from "@/components/AnimatedCount";
 
 export default function DoctorsPage() {
   return (
@@ -21,29 +22,37 @@ export default function DoctorsPage() {
               style={{ backgroundColor: "#2D3748" }}
             >
               <div
-                className="w-28 h-28 flex items-center justify-center mb-5"
+                className="w-40 h-40 sm:w-48 sm:h-48 flex items-center justify-center mb-7 shadow-lg"
                 style={{ backgroundColor: "#A93539" }}
               >
-                <span className="text-3xl font-bold text-white tracking-wide">NM</span>
+                <span className="text-5xl sm:text-6xl font-bold text-white tracking-wide">NM</span>
               </div>
-              <h2 className="text-2xl font-bold text-white">Dr. Naim A. Mansuri</h2>
-              <p className="text-white/60 mt-1 text-sm">Consultant Audiologist</p>
+              <h2 className="text-3xl font-bold text-white">Dr. Naim A. Mansuri</h2>
+              <p className="text-white/60 mt-2 text-base">Consultant Audiologist</p>
               <div className="w-12 h-0.5 my-5" style={{ backgroundColor: "#A93539" }} />
               <div className="grid grid-cols-2 gap-6 w-full text-center">
                 <div>
-                  <div className="text-3xl font-bold text-white" style={{ color: "#A93539" }}>35+</div>
+                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
+                    <AnimatedCount value={35} suffix="+" />
+                  </div>
                   <div className="text-xs text-white/50 mt-1">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>1,200+</div>
+                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
+                    <AnimatedCount value={1200} suffix="+" />
+                  </div>
                   <div className="text-xs text-white/50 mt-1">Patients Treated</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>4</div>
+                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
+                    <AnimatedCount value={4} />
+                  </div>
                   <div className="text-xs text-white/50 mt-1">Clinic Locations</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>20+</div>
+                  <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
+                    <AnimatedCount value={20} suffix="+" />
+                  </div>
                   <div className="text-xs text-white/50 mt-1">Specialists</div>
                 </div>
               </div>
@@ -54,7 +63,7 @@ export default function DoctorsPage() {
             <h2 className="text-3xl font-bold text-[#1A202C] mb-4">Dr. Naim A. Mansuri</h2>
             <p className="text-[#4A5568] leading-relaxed mb-4">
               Dr. Naim A. Mansuri is the lead Consultant Audiologist at Advance Speech and Hearing
-              Clinic, bringing over 35 years of clinical experience in audiology and hearing
+              Clinic, providing specialist clinical care in audiology and hearing
               rehabilitation across Gujarat.
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-4">

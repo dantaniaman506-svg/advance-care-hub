@@ -1,0 +1,1 @@
+- [Clinic logo assets](clinic-logo-assets.md) — the uploaded square logo needs a trimmed wide copy for header/footer and a separate 64px favicon copy.
