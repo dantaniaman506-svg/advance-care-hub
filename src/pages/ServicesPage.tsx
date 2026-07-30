@@ -47,7 +47,7 @@ export default function ServicesPage() {
       <section style={{ backgroundColor: "#A93539" }} className="py-12">
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-white text-center sm:text-left">
-            <h3 className="text-2xl font-bold mb-1">Not Sure Which Service You Need?</h3>
+            <h3 className="text-2xl font-bold mb-1 text-white">Not Sure Which Service You Need?</h3>
             <p className="text-white/80 text-sm">Contact us and we'll guide you to the right assessment</p>
           </div>
           <Link to="/contact" className="btn-navy shrink-0">

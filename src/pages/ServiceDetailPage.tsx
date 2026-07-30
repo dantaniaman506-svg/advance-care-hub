@@ -109,7 +109,7 @@ export default function ServiceDetailPage() {
                 </ul>
               </div>
               <div className="p-5 text-white" style={{ backgroundColor: "#A93539" }}>
-                <h3 className="font-bold mb-2">Need Help?</h3>
+                <h3 className="font-bold mb-2 text-white">Need Help?</h3>
                 <p className="text-sm text-white/80 mb-4">
                   Contact us to learn more about this service or to book an appointment.
                 </p>

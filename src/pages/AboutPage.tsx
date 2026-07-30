@@ -127,7 +127,7 @@ export default function AboutPage() {
       <section style={{ backgroundColor: "#A93539" }} className="py-12">
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-white text-center sm:text-left">
-            <h3 className="text-2xl font-bold mb-1">Ready to Get Started?</h3>
+            <h3 className="text-2xl font-bold mb-1 text-white">Ready to Get Started?</h3>
             <p className="text-white/80 text-sm">Book your appointment at any of our 4 Gujarat locations</p>
           </div>
           <Link to="/appointment" className="btn-navy shrink-0">

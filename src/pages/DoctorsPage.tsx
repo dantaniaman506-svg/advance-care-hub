@@ -94,7 +94,7 @@ export default function DoctorsPage() {
       <section style={{ backgroundColor: "#A93539" }} className="py-12">
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-white text-center sm:text-left">
-            <h3 className="text-2xl font-bold mb-1">Consult with Dr. Mansuri</h3>
+            <h3 className="text-2xl font-bold mb-1 text-white">Consult with Dr. Mansuri</h3>
             <p className="text-white/80 text-sm">Available at all 4 Gujarat locations</p>
           </div>
           <Link to="/appointment" className="btn-navy shrink-0">
