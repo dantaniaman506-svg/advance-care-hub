@@ -12,61 +12,65 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section
-        className="relative overflow-hidden flex items-center justify-center"
+        className="relative overflow-hidden"
         style={{ minHeight: 580 }}
       >
         {/* Full-bleed background image */}
         <div className="absolute inset-0">
           <HeroSlider className="h-full w-full" />
-          {/* Ice-blue tint over the whole image */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "rgba(219, 234, 254, 0.22)" }}
-          />
         </div>
 
-        {/* Centered frosted-glass text panel */}
-        <div className="relative z-10 flex items-center justify-center w-full py-20 px-4">
-          <div
-            className="text-center max-w-lg px-8 py-12"
-            style={{
-              background: "rgba(237, 242, 247, 0.84)",
-              backdropFilter: "blur(6px)",
-              WebkitBackdropFilter: "blur(6px)",
-            }}
-          >
-            <p
-              className="eyebrow hero-anim"
-              style={{ animationDelay: "0.08s" }}
-            >
-              Welcome To
-            </p>
-            <h1
-              className="text-[1.9rem] sm:text-[2.6rem] lg:text-[3rem] font-bold leading-tight mt-2 mb-4 hero-anim"
-              style={{ color: "#A93539", animationDelay: "0.22s" }}
-            >
-              Advance Speech and Hearing Clinic
-            </h1>
-            <p
-              className="text-sm sm:text-base text-[#4A5568] leading-relaxed mb-8 hero-anim"
-              style={{ animationDelay: "0.38s" }}
-            >
-              Trusted audiology and speech therapy care across Gujarat —
-              accurate hearing assessments, advanced hearing aid fittings,
-              and complete auditory rehabilitation under one roof.
-            </p>
-            <div
-              className="hero-anim"
-              style={{ animationDelay: "0.52s" }}
-            >
-              <a
-                href={whatsappLink("Hello! I want to book a consultation.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
+        {/* Gradient overlay: ice-blue on left → transparent on right */}
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(224,235,248,0.96) 0%, rgba(224,235,248,0.80) 38%, rgba(224,235,248,0.35) 62%, rgba(224,235,248,0) 80%)",
+          }}
+        />
+
+        {/* Text — left-aligned, directly on gradient */}
+        <div className="relative z-20 flex items-center" style={{ minHeight: 580 }}>
+          <div className="container-page w-full py-16 lg:py-24">
+            <div style={{ maxWidth: 600 }}>
+              <p
+                className="eyebrow hero-anim"
+                style={{ animationDelay: "0.08s" }}
               >
-                Book Consultancy
-              </a>
+                Welcome To
+              </p>
+              <h1
+                className="hero-anim mt-2 mb-5 font-bold leading-[1.1]"
+                style={{
+                  color: "#A93539",
+                  fontSize: "clamp(2rem, 5vw, 3.25rem)",
+                  animationDelay: "0.22s",
+                }}
+              >
+                Advance Speech and Hearing Clinic
+              </h1>
+              <p
+                className="hero-anim text-[#1F2937] leading-relaxed mb-8"
+                style={{
+                  fontSize: "clamp(0.92rem, 1.5vw, 1.05rem)",
+                  animationDelay: "0.38s",
+                  maxWidth: 520,
+                }}
+              >
+                Trusted audiology and speech therapy care across Gujarat —
+                accurate hearing assessments, advanced hearing aid fittings,
+                and complete auditory rehabilitation under one roof.
+              </p>
+              <div className="hero-anim" style={{ animationDelay: "0.52s" }}>
+                <a
+                  href={whatsappLink("Hello! I want to book a consultation.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Book Consultancy
+                </a>
+              </div>
             </div>
           </div>
         </div>

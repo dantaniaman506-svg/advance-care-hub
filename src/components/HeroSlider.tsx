@@ -3,23 +3,13 @@ import { useState, useEffect } from "react";
 const slides = [
   {
     id: 0,
-    image: "/images/clinic1.webp",
-    alt: "Advance Speech and Hearing Clinic",
+    image: "/images/hero1.png",
+    alt: "Hearing aid fitting — Advance Speech and Hearing Clinic",
   },
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1920&q=80",
-    alt: "Doctor consulting with patient",
-  },
-  {
-    id: 2,
-    image: "/images/clinic2.webp",
-    alt: "Hearing care services",
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1920&q=80",
-    alt: "Audiologist examining patient",
+    image: "/images/hero2.png",
+    alt: "Ear examination — Advance Speech and Hearing Clinic",
   },
 ];
 
@@ -33,7 +23,7 @@ export default function HeroSlider({ className = "" }: HeroSliderProps) {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4500);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -48,13 +38,13 @@ export default function HeroSlider({ className = "" }: HeroSliderProps) {
           <img
             src={slide.image}
             alt={slide.alt}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             loading={i === 0 ? "eager" : "lazy"}
           />
         </div>
       ))}
       {/* Dots */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {slides.map((_, i) => (
           <button
             key={i}
