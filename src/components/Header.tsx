@@ -42,15 +42,14 @@ export default function Header() {
         }`}
       >
         <div className="container-page flex items-center justify-between h-[70px]">
-          {/* Wordmark */}
-          <Link to="/" className="flex flex-col leading-none group" onClick={close}>
-            <span className="font-bold text-[1.15rem] tracking-tight" style={{ fontFamily: "Roboto, sans-serif" }}>
-              <span className="text-[#1A202C]">Advance </span>
-              <span style={{ color: "#A93539" }}>Speech</span>
-            </span>
-            <span className="text-[0.78rem] font-medium text-[#54595F] mt-0.5">
-              and Hearing Clinic
-            </span>
+          {/* Logo image */}
+          <Link to="/" className="flex items-center" onClick={close}>
+            <img
+              src="/images/logo.png"
+              alt="Advance Speech and Hearing Clinic"
+              className="h-12 w-auto object-contain"
+              style={{ maxWidth: 180 }}
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -118,7 +117,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile menu overlay — always mounted, animated in/out */}
+      {/* Mobile menu overlay */}
       <div
         className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -134,12 +133,13 @@ export default function Header() {
         >
             {/* Panel header */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-              <Link to="/" onClick={close} className="flex flex-col leading-none">
-                <span className="font-bold text-[1rem]">
-                  <span className="text-[#1A202C]">Advance </span>
-                  <span style={{ color: "#A93539" }}>Speech</span>
-                </span>
-                <span className="text-[0.7rem] text-[#54595F] mt-0.5">and Hearing Clinic</span>
+              <Link to="/" onClick={close}>
+                <img
+                  src="/images/logo.png"
+                  alt="Advance Speech and Hearing Clinic"
+                  className="h-10 w-auto object-contain"
+                  style={{ maxWidth: 160 }}
+                />
               </Link>
               <button onClick={close} className="text-gray-500 hover:text-[#A93539] transition-colors">
                 <X className="h-5 w-5" />

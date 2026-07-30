@@ -3,23 +3,84 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
 import { services } from "@/data/services";
 
+const footerAddresses = [
+  {
+    city: "Gandhinagar",
+    label: "Head Office",
+    address: "3rd Floor, 307, Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010",
+    phone: "+91 99790 02527",
+  },
+  {
+    city: "Patan",
+    label: "Patan Branch",
+    address: "1st Floor, Pandya Complex, Opp. Old S.T. Bus Stop, Krishnanagar Society, Hansapur Part, Patan, Gujarat 384265",
+    phone: "+91 97242 82527",
+  },
+  {
+    city: "Ahmedabad",
+    label: "Sarkhej Branch",
+    address: "First Floor, Blue Water, 108, Amber Tower Rd, Near Bushra Hospital, Arshad Park, Sarkhej, Ahmedabad, Gujarat 380055",
+    phone: "",
+  },
+  {
+    city: "Surendranagar",
+    label: "Surendranagar Branch",
+    address: "Surendranagar, Gujarat",
+    phone: "",
+  },
+];
+
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#1A202C", color: "rgba(255,255,255,0.8)" }}>
+
+      {/* Addresses strip */}
+      <div style={{ backgroundColor: "#A93539" }} className="py-8">
+        <div className="container-page">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {footerAddresses.map((loc) => (
+              <div key={loc.city} className="flex gap-3">
+                <div className="mt-0.5 shrink-0">
+                  <MapPin className="h-4 w-4 text-white/80" />
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm mb-0.5">
+                    {loc.city}
+                    <span className="font-normal text-white/70 text-xs ml-1.5">({loc.label})</span>
+                  </div>
+                  <p className="text-xs text-white/80 leading-relaxed">{loc.address}</p>
+                  {loc.phone && (
+                    <a
+                      href={`tel:${loc.phone.replace(/\s/g, "")}`}
+                      className="text-xs text-white font-medium mt-1 inline-flex items-center gap-1 hover:underline"
+                    >
+                      <Phone className="h-3 w-3" /> {loc.phone}
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Main footer */}
       <div className="container-page py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Col 1: About */}
           <div>
             <div className="mb-4">
-              <span className="font-bold text-xl text-white">Advance </span>
-              <span className="font-bold text-xl" style={{ color: "#A93539" }}>Speech</span>
-              <div className="text-sm text-white/60 mt-0.5">and Hearing Clinic</div>
+              <img
+                src="/images/logo.png"
+                alt="Advance Speech and Hearing Clinic"
+                className="h-14 w-auto object-contain"
+                style={{ filter: "brightness(0) invert(1)", maxWidth: 160 }}
+              />
             </div>
             <p className="text-sm text-white/65 leading-relaxed mb-5">
-              Trusted audiology and speech therapy care across Gujarat — accurate hearing
-              assessments, advanced hearing aid fittings, and complete auditory rehabilitation
-              under one roof.
+              Trusted audiology and speech therapy care across Gujarat — accurate
+              hearing assessments, advanced hearing aid fittings, and complete
+              auditory rehabilitation under one roof.
             </p>
             {/* Social */}
             <div className="flex items-center gap-3">
@@ -97,7 +158,7 @@ export default function Footer() {
                 <Clock className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
                 <span className="text-sm text-white/65">
                   Open All 7 Days<br />
-                  Closes 7:00 PM
+                  10:00 AM – 7:00 PM
                 </span>
               </li>
             </ul>

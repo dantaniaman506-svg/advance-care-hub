@@ -120,44 +120,31 @@ export default function HomePage() {
           <Reveal>
             <div className="relative">
               <img
-                src="/images/clinic3.webp"
-                alt="Advance Speech and Hearing Clinic"
-                className="w-full object-cover"
+                src="/images/hearing-aids-otoscope.png"
+                alt="Hearing aids and audiometry equipment — Advance Speech and Hearing Clinic"
+                className="w-full object-cover rounded-sm shadow-lg"
                 style={{ aspectRatio: "4/3" }}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80";
-                }}
               />
-              {/* Experience badge */}
-              <div
-                className="absolute -bottom-4 -right-4 w-28 h-28 flex flex-col items-center justify-center text-white shadow-xl"
-                style={{ backgroundColor: "#A93539" }}
-              >
-                <span className="text-3xl font-bold leading-none">35+</span>
-                <span className="text-xs text-center leading-tight mt-1 px-2">
-                  Years Experience
-                </span>
-              </div>
             </div>
           </Reveal>
           <Reveal delay={120}>
             <p className="eyebrow mb-3">About Us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A202C] mb-4">
-              Advance Speech and Hearing Clinic
+              Advance Speech &amp; Hearing Clinic
             </h2>
             <p className="text-[#4A5568] leading-relaxed mb-4">
-              Advance Speech and Hearing Clinic stands as a trusted centre for
-              audiological and speech therapy care across Gujarat. With clinics
-              in Gandhinagar, Patan, Ahmedabad, and Surendranagar, we bring
-              specialist-level care close to our patients.
+              Hearing loss is a common condition that can affect people of all
+              ages and, if left untreated, may significantly impact daily life.
+              It can make conversations difficult to understand, cause people to
+              avoid social situations, create feelings of loneliness, and
+              contribute to frustration and reduced mental well-being.
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-6">
-              Led by Dr. Naim A. Mansuri — Consultant Audiologist — our team
-              provides accurate hearing assessments, advanced digital hearing aid
-              fittings, cochlear implant support, speech therapy, and tinnitus
-              management, using calibrated equipment and evidence-based
-              practices tailored to their specific needs.
+              Advance Speech &amp; Hearing Clinic offers comprehensive hearing
+              care services — hearing assessments, hearing aid fitting,
+              programming, adjustment, maintenance, and repair — across multiple
+              branches in Gujarat including Gandhinagar, Ahmedabad, Surendranagar,
+              Patan, Mehsana, and Himmatnagar.
             </p>
             <Link to="/about" className="btn-primary">
               Know More
@@ -166,8 +153,95 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
+      {/* ── HEARING LOSS INFO ── */}
       <section style={{ backgroundColor: "#EDF2F7" }} className="py-16">
+        <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
+          <Reveal>
+            <p className="eyebrow mb-3">Why Hearing Care Matters</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A202C] mb-5">
+              Understanding Hearing Loss &amp; Its Impact
+            </h2>
+            <p className="text-[#4A5568] leading-relaxed mb-4">
+              A hearing evaluation is a quick, simple, and painless process
+              performed by a qualified audiologist in a soundproof room using
+              advanced diagnostic equipment. After reviewing your medical history
+              and assessing your hearing, the audiologist determines the type and
+              degree of hearing loss and recommends the most suitable hearing aid
+              if needed.
+            </p>
+            <p className="text-[#4A5568] leading-relaxed mb-6">
+              Modern digital hearing aids improve speech clarity, enhance
+              communication, make phone conversations easier, and help individuals
+              stay socially active. Contrary to common myths, hearing aids do not
+              worsen hearing — they are carefully programmed for each person's
+              unique hearing needs.
+            </p>
+            <a
+              href={whatsappLink("Hello! I'd like to book a hearing evaluation.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Book a Free Evaluation
+            </a>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                {
+                  title: "Hearing Aid Styles Available",
+                  items: [
+                    "Behind-the-Ear (BTE)",
+                    "Mini Behind-the-Ear (Mini BTE)",
+                    "Receiver-in-Canal (RIC)",
+                    "In-the-Canal (ITC)",
+                    "Completely-in-Canal (CIC)",
+                    "Rechargeable Hearing Aids",
+                  ],
+                },
+              ].map((group) => (
+                <div
+                  key={group.title}
+                  className="bg-white p-6 shadow-sm"
+                  style={{ borderLeft: "4px solid #A93539" }}
+                >
+                  <h4 className="font-bold text-[#1A202C] mb-4">{group.title}</h4>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-[#4A5568]">
+                        <CheckCircle className="h-4 w-4 shrink-0 mt-0.5" style={{ color: "#A93539" }} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+              <div
+                className="bg-white p-6 shadow-sm"
+                style={{ borderLeft: "4px solid #1A202C" }}
+              >
+                <h4 className="font-bold text-[#1A202C] mb-3">Benefits of Two Hearing Aids</h4>
+                <ul className="space-y-2">
+                  {[
+                    "Better speech understanding in noise",
+                    "Improved sound quality & balance",
+                    "Enhanced directional hearing",
+                    "More natural listening experience",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-[#4A5568]">
+                      <CheckCircle className="h-4 w-4 shrink-0 mt-0.5" style={{ color: "#A93539" }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── SERVICES ── */}
+      <section className="py-16 bg-white">
         <div className="container-page">
           <Reveal>
             <div className="text-center mb-12">
@@ -210,7 +284,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <Link to="/services" className="btn-primary">
-              View All Service
+              View All Services
             </Link>
           </div>
         </div>
@@ -227,7 +301,7 @@ export default function HomePage() {
               Book a Free Hearing Consultation
             </h3>
             <p className="text-white/80 text-sm">
-              4 locations across Gujarat • Open all 7 days • Dr. Naim A.
+              Multiple locations across Gujarat • Open all 7 days • Dr. Naim A.
               Mansuri
             </p>
           </div>
@@ -252,16 +326,14 @@ export default function HomePage() {
             </h2>
             <p className="text-[#4A5568] leading-relaxed mb-4">
               At Advance Speech and Hearing Clinic, we believe that every
-              individual deserves the full richness of sound. Since our
-              inception, our mission has been to empower lives through improved
-              hearing health — because we know that better hearing leads to
-              better living.
+              individual deserves the full richness of sound. Our mission is to
+              empower lives through improved hearing health — because we know
+              that better hearing leads to better living.
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-6">
-              Led by Dr. Naim A. Mansuri — Consultant Audiologist with over
-              35 years of clinical experience — our team serves patients of all
-              ages across 4 locations in Gujarat with compassionate, evidence-based
-              care.
+              Led by Dr. Naim A. Mansuri — Consultant Audiologist — our team
+              serves patients of all ages across multiple locations in Gujarat
+              with compassionate, evidence-based care.
             </p>
             <Link to="/doctors" className="btn-primary">
               More About Us
@@ -284,17 +356,17 @@ export default function HomePage() {
                   Consultant Audiologist
                 </p>
                 <p className="text-white/60 text-sm mt-3 leading-relaxed">
-                  M.Sc. (Audiology & Speech-Language Pathology) •
+                  M.Sc. (Audiology &amp; Speech-Language Pathology) •
                   Registered Audiologist • Gujarat
                 </p>
               </div>
-              {/* Stats grid */}
+              {/* Info grid */}
               <div className="grid grid-cols-2 gap-5">
                 {[
-                  { value: "35+", label: "Years Experience" },
                   { value: "1,200+", label: "Patients Treated" },
-                  { value: "4", label: "Clinic Locations" },
+                  { value: "6", label: "Clinic Locations" },
                   { value: "7", label: "Days a Week" },
+                  { value: "All Ages", label: "Served" },
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -373,30 +445,31 @@ export default function HomePage() {
       {/* ── APPOINTMENT CTA ── */}
       <section
         className="py-16"
-        style={{ background: "linear-gradient(135deg, #1A202C 0%, #2D3748 100%)" }}
+        style={{ background: "linear-gradient(135deg, #A93539 0%, #8B2B2E 100%)" }}
       >
         <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
           <Reveal>
-            <p className="eyebrow mb-3" style={{ color: "#A93539" }}>
+            <p className="eyebrow mb-3" style={{ color: "rgba(255,255,255,0.7)" }}>
               Book Appointment
             </p>
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Improve Your Hearing?
             </h2>
-            <p className="text-white/70 leading-relaxed mb-6">
+            <p className="text-white/80 leading-relaxed mb-6">
               Don't let hearing loss hold you back. Book an appointment at any
-              of our 4 Gujarat locations. Our specialist team is here to help
-              you every step of the way.
+              of our Gujarat locations. Our specialist team is here to help
+              you every step of the way — from assessment to fitting to
+              long-term care.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/appointment" className="btn-primary">
+              <Link to="/appointment" className="btn-navy">
                 Book Appointment
               </Link>
               <a
                 href={whatsappLink("Hello! I'd like to enquire about an appointment.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white/30 text-white font-semibold text-sm hover:border-white hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white/50 text-white font-semibold text-sm hover:border-white hover:bg-white/10 transition-colors"
               >
                 WhatsApp Us
               </a>
@@ -406,8 +479,8 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 {
-                  title: "4 Locations",
-                  desc: "Gandhinagar, Patan, Ahmedabad & Surendranagar",
+                  title: "6 Locations",
+                  desc: "Gandhinagar, Ahmedabad, Patan, Surendranagar, Mehsana & Himmatnagar",
                 },
                 {
                   title: "Open 7 Days",
@@ -415,7 +488,7 @@ export default function HomePage() {
                 },
                 {
                   title: "Expert Doctor",
-                  desc: "Dr. Naim A. Mansuri — 35+ years experience",
+                  desc: "Dr. Naim A. Mansuri — Consultant Audiologist",
                 },
                 {
                   title: "All Ages",
@@ -426,14 +499,14 @@ export default function HomePage() {
                   key={item.title}
                   className="p-5"
                   style={{
-                    backgroundColor: "rgba(255,255,255,0.05)",
-                    borderLeft: "3px solid #A93539",
+                    backgroundColor: "rgba(255,255,255,0.12)",
+                    borderLeft: "3px solid rgba(255,255,255,0.6)",
                   }}
                 >
                   <h4 className="font-bold text-white text-sm mb-1">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-white/50 leading-relaxed">
+                  <p className="text-xs text-white/70 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

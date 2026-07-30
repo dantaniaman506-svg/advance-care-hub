@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 const slides = [
   {
     id: 0,
-    image: "/images/hero1.png",
+    desktopImage: "/images/hero1.png",
+    mobileImage: "/images/hero1-mobile.png",
     alt: "Hearing aid fitting — Advance Speech and Hearing Clinic",
   },
   {
     id: 1,
-    image: "/images/hero2.png",
+    desktopImage: "/images/hero2.png",
+    mobileImage: "/images/ear-exam-mobile.png",
     alt: "Ear examination — Advance Speech and Hearing Clinic",
   },
 ];
@@ -35,10 +37,18 @@ export default function HeroSlider({ className = "" }: HeroSliderProps) {
           className="absolute inset-0 transition-opacity duration-1000"
           style={{ opacity: i === current ? 1 : 0 }}
         >
+          {/* Desktop image */}
           <img
-            src={slide.image}
+            src={slide.desktopImage}
             alt={slide.alt}
-            className="w-full h-full object-cover object-center"
+            className="hidden sm:block w-full h-full object-cover object-center"
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+          {/* Mobile image */}
+          <img
+            src={slide.mobileImage}
+            alt={slide.alt}
+            className="block sm:hidden w-full h-full object-cover object-center"
             loading={i === 0 ? "eager" : "lazy"}
           />
         </div>

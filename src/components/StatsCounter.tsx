@@ -8,9 +8,9 @@ interface Stat {
 
 const stats: Stat[] = [
   { value: 1200, suffix: "+", label: "Happy Patients" },
-  { value: 20, suffix: "", label: "Specialist Doctors" },
-  { value: 35, suffix: "", label: "Years Experience" },
-  { value: 150, suffix: "K", label: "Problem Solve" },
+  { value: 4, suffix: "", label: "Clinic Locations" },
+  { value: 7, suffix: "", label: "Days Open" },
+  { value: 150, suffix: "K", label: "Problem Solved" },
 ];
 
 function useCountUp(target: number, duration = 2000, started: boolean) {
@@ -39,7 +39,7 @@ function StatItem({ stat, started }: { stat: Stat; started: boolean }) {
   const count = useCountUp(stat.value, 2200, started);
 
   return (
-    <div className="text-center py-8 px-4">
+    <div className="text-center py-10 px-4">
       <div
         className="text-5xl lg:text-6xl font-bold leading-none"
         style={{ color: "#A93539" }}
@@ -75,11 +75,14 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section ref={ref} className="py-6 bg-white">
+    <section
+      ref={ref}
+      className="py-2"
+      style={{ background: "linear-gradient(135deg, #1A202C 0%, #2D3748 100%)" }}
+    >
       <div className="container-page">
-        {/* On mobile: single column stacked. On lg: 4-col row. */}
         <div className="max-w-sm mx-auto lg:max-w-none">
-          <div className="grid grid-cols-1 lg:grid-cols-4 divide-y divide-gray-100 lg:divide-y-0 lg:divide-x lg:divide-gray-100">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-y-0 divide-x-0 lg:divide-x lg:divide-white/10">
             {stats.map((stat) => (
               <StatItem key={stat.label} stat={stat} started={started} />
             ))}
