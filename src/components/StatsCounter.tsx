@@ -3,8 +3,7 @@ import AnimatedCount from "@/components/AnimatedCount";
 
 const stats = [
   { value: 1200, suffix: "+", label: "Happy Patients" },
-  { value: 20, suffix: "", label: "Specialist Doctors" },
-  { value: 6, suffix: "", label: "Clinic Locations" },
+  { value: 4, suffix: "", label: "Clinic Locations" },
   { value: 150, suffix: "K", label: "Problem Solved" },
 ];
 
@@ -58,7 +57,7 @@ export default function StatsCounter() {
     >
       <div className="container-page">
         <div className="bg-white shadow-[0_18px_45px_rgba(26,32,44,0.06)] max-w-[1080px] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y divide-[#EDF2F7] sm:divide-y-0 sm:divide-x">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-[#EDF2F7] sm:divide-y-0 sm:divide-x">
             {stats.map((stat) => (
               <StatItem key={stat.label} stat={stat} started={started} />
             ))}
