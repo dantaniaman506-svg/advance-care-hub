@@ -57,3 +57,4 @@ src/
 - No blog section on this site
 - WhatsApp integration on all CTA and appointment flows
 - Branch/address selection when booking appointments
+- **Always push to GitHub after every task or change** (no exceptions)
