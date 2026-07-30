@@ -26,7 +26,7 @@ export const services: Service[] = [
       {
         heading: "What Are Hearing Assessments?",
         paragraphs: [
-          "A hearing assessment is a set of diagnostic tests used to measure how well a person hears across different frequencies and volumes. At Advance Speech and Hearing Clinic, our assessments are carried out by trained audiologists using calibrated equipment, giving an accurate picture of a patient's hearing health in a single visit.",
+          "A hearing assessment is a set of diagnostic tests used to measure how well a person hears across different frequencies and volumes. At Advance Speech & Hearing Clinic, our assessments are carried out by trained audiologists using calibrated equipment, giving an accurate picture of a patient's hearing health in a single visit.",
           "Assessments are suitable for children as young as a few months old through to seniors, and results guide every next step — whether that's monitoring, a hearing aid recommendation, or referral for further treatment.",
         ],
       },

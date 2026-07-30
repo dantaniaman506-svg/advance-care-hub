@@ -9,7 +9,7 @@ export default function DoctorsPage() {
     <>
       <PageBanner
         title="Our Doctor"
-        subtitle="Meet the specialist behind Advance Speech and Hearing Clinic"
+        subtitle="Meet the specialist behind Advance Speech & Hearing Clinic"
         breadcrumb={[{ label: "Doctors" }]}
       />
 

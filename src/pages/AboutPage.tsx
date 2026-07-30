@@ -19,7 +19,7 @@ export default function AboutPage() {
           <Reveal>
             <img
               src="/images/clinic1.webp"
-              alt="Advance Speech and Hearing Clinic"
+              alt="Advance Speech & Hearing Clinic"
               className="w-full object-cover"
               style={{ aspectRatio: "4/3" }}
               onError={(e) => {
@@ -31,7 +31,7 @@ export default function AboutPage() {
           <Reveal delay={120}>
             <p className="eyebrow mb-3">About Us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A202C] mb-4">
-              Advance Speech and Hearing Clinic
+              Advance Speech & Hearing Clinic
             </h2>
             <p className="text-[#4A5568] leading-relaxed mb-4">
               Founded on a commitment to accessible, high-quality audiological care, Advance Speech

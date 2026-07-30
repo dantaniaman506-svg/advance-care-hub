@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="mb-4">
               <img
                 src="/images/logo-wide.png"
-                alt="Advance Speech and Hearing Clinic"
+                alt="Advance Speech & Hearing Clinic"
                 className="h-20 w-auto object-contain"
                 style={{ maxWidth: 225 }}
               />
@@ -170,7 +170,7 @@ export default function Footer() {
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container-page py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Advance Speech and Hearing Clinic. All rights reserved.
+            © {new Date().getFullYear()} Advance Speech & Hearing Clinic. All rights reserved.
           </p>
           <p className="text-xs text-white/40">
             Dr. Naim A. Mansuri — Consultant Audiologist

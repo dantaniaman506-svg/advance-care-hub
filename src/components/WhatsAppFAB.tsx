@@ -3,7 +3,7 @@ import { whatsappLink } from "@/data/clinic";
 export default function WhatsAppFAB() {
   return (
     <a
-      href={whatsappLink("Hello! I'd like to book an appointment at Advance Speech and Hearing Clinic.")}
+      href={whatsappLink("Hello! I'd like to book an appointment at Advance Speech & Hearing Clinic.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

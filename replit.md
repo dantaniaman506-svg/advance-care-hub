@@ -1,6 +1,6 @@
-# Advance Speech and Hearing Clinic Website
+# Advance Speech & Hearing Clinic Website
 
-A fully responsive, multi-page website for Advance Speech and Hearing Clinic — an audiology and speech therapy clinic based in Gujarat, India.
+A fully responsive, multi-page website for Advance Speech & Hearing Clinic — an audiology and speech therapy clinic based in Gujarat, India.
 
 ## Stack
 

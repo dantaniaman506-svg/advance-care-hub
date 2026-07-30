@@ -47,7 +47,7 @@ export default function HomePage() {
                   animationDelay: "0.22s",
                 }}
               >
-                Advance Speech and Hearing Clinic
+                Advance Speech & Hearing Clinic
               </h1>
               <p
                 className="hero-anim text-[#1F2937] leading-relaxed mb-8"
@@ -121,7 +121,7 @@ export default function HomePage() {
             <div className="relative">
               <img
                 src="/images/hearing-aids-otoscope.png"
-                alt="Hearing aids and audiometry equipment — Advance Speech and Hearing Clinic"
+                alt="Hearing aids and audiometry equipment — Advance Speech & Hearing Clinic"
                 className="w-full object-cover rounded-sm shadow-lg"
                 style={{ aspectRatio: "4/3" }}
               />

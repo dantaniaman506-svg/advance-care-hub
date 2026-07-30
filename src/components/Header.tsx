@@ -46,7 +46,7 @@ export default function Header() {
           <Link to="/" className="flex items-center" onClick={close}>
             <img
               src="/images/logo-wide.png"
-              alt="Advance Speech and Hearing Clinic"
+              alt="Advance Speech & Hearing Clinic"
               className="h-14 w-auto object-contain"
               style={{ maxWidth: 205 }}
             />
@@ -136,7 +136,7 @@ export default function Header() {
               <Link to="/" onClick={close}>
                 <img
                   src="/images/logo-wide.png"
-                  alt="Advance Speech and Hearing Clinic"
+                  alt="Advance Speech & Hearing Clinic"
                   className="h-12 w-auto object-contain"
                   style={{ maxWidth: 175 }}
                 />

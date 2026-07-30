@@ -4,7 +4,7 @@ Ek quick heads-up before prompt doon: About Us, Mission, aur doctor bio wagerah 
 
 ```markdown
 
-# Website Build Prompt — Advance Speech and Hearing Clinic
+# Website Build Prompt — Advance Speech & Hearing Clinic
 
 ## Goal
 
@@ -16,7 +16,7 @@ Make the site feel smooth: subtle scroll-in animations on sections, smooth hover
 
 ## Business Info
 
-**Name:** Advance Speech and Hearing Clinic
+**Name:** Advance Speech & Hearing Clinic
 
 **Type:** Audiologist / Speech & Hearing Specialist Clinic (multi-location, Gujarat)
 
@@ -26,7 +26,7 @@ Make the site feel smooth: subtle scroll-in animations on sections, smooth hover
 
 **WhatsApp / Phone:** +91 99790 02527
 
-**Logo:** No image logo yet — use a clean text-based wordmark ("Advance Speech and Hearing Clinic") in the heading font, styled like the reference logo (two-tone: one word in dark navy, one word in the primary red).
+**Logo:** No image logo yet — use a clean text-based wordmark ("Advance Speech & Hearing Clinic") in the heading font, styled like the reference logo (two-tone: one word in dark navy, one word in the primary red).
 
 ### Locations
 
@@ -126,7 +126,7 @@ xs: 1em · sm: 1.5rem · md: 2rem · lg: 2.5em · xl: 3.5em · xxl: 5rem
 
 - Column 4 "Contact": WhatsApp/phone +91 99790 02527, head office address (Gandhinagar), link to full Locations page
 
-- Bottom bar: "Advance Speech and Hearing Clinic © 2026 All rights reserved." | Privacy | Terms of Use
+- Bottom bar: "Advance Speech & Hearing Clinic © 2026 All rights reserved." | Privacy | Terms of Use
 
 ### Appointment / Contact Form (reused on Home, all service pages, Contact page)
 
@@ -154,9 +154,9 @@ Fields: Your Name, Your Phone/Email, Subject, Message (optional), Submit button.
 
 ### 1. Home
 
-- **Hero:** Eyebrow "Welcome To" → Heading "Advance Speech and Hearing Clinic" → Tagline: "Trusted audiology and speech therapy care across Gujarat — accurate hearing assessments, advanced hearing aid fittings, and complete auditory rehabilitation under one roof." → CTA button "Book Consultation" → two side-by-side cards: "Call / WhatsApp Us — +91 99790 02527" and "Open All Days — Closes 7 PM"
+- **Hero:** Eyebrow "Welcome To" → Heading "Advance Speech & Hearing Clinic" → Tagline: "Trusted audiology and speech therapy care across Gujarat — accurate hearing assessments, advanced hearing aid fittings, and complete auditory rehabilitation under one roof." → CTA button "Book Consultation" → two side-by-side cards: "Call / WhatsApp Us — +91 99790 02527" and "Open All Days — Closes 7 PM"
 
-- **About teaser:** Eyebrow "About Us" → Heading "Advance Speech and Hearing Clinic" → Paragraph: "Advance Speech and Hearing Clinic has been serving patients across Gujarat with dedicated audiology and speech-language care. Led by Dr. Naim A. Mansuri, our team combines clinical expertise with modern diagnostic technology to assess, treat, and manage hearing and speech conditions for patients of every age. From our head office in Gandhinagar to branches in Patan, Ahmedabad, and Surendranagar, we bring the same standard of personalized care to every location." → "Know More" button
+- **About teaser:** Eyebrow "About Us" → Heading "Advance Speech & Hearing Clinic" → Paragraph: "Advance Speech & Hearing Clinic has been serving patients across Gujarat with dedicated audiology and speech-language care. Led by Dr. Naim A. Mansuri, our team combines clinical expertise with modern diagnostic technology to assess, treat, and manage hearing and speech conditions for patients of every age. From our head office in Gandhinagar to branches in Patan, Ahmedabad, and Surendranagar, we bring the same standard of personalized care to every location." → "Know More" button
 
 - **Services grid:** Eyebrow "Services" → Heading "Our Hearing & Speech Services" → 9 two-column cards (see Services section below) → "View All Services" button
 
@@ -174,7 +174,7 @@ Fields: Your Name, Your Phone/Email, Subject, Message (optional), Submit button.
 
 - Image/video block (ear + audiometry chart style image)
 
-- Heading "Advance Speech and Hearing Clinic" → Paragraph: "At Advance Speech and Hearing Clinic, we believe better hearing and clear communication change lives — at home, at school, and at work. Every patient who walks into any of our clinics receives a thorough evaluation, a clear explanation of their results, and a treatment plan built around their specific needs and lifestyle."
+- Heading "Advance Speech & Hearing Clinic" → Paragraph: "At Advance Speech & Hearing Clinic, we believe better hearing and clear communication change lives — at home, at school, and at work. Every patient who walks into any of our clinics receives a thorough evaluation, a clear explanation of their results, and a treatment plan built around their specific needs and lifestyle."
 
 - **Mission & Values** accordion section:
 
@@ -202,7 +202,7 @@ Fields: Your Name, Your Phone/Email, Subject, Message (optional), Submit button.
 
   - **Dr. Naim A. Mansuri** — Consultant Audiologist
 
-  - Bio: "Dr. Naim A. Mansuri leads Advance Speech and Hearing Clinic with a focus on precise diagnosis and personalized hearing aid fitting. With years of clinical experience across multiple Gujarat locations, he has helped hundreds of patients — from newborns to seniors — regain clear hearing and confident communication."
+  - Bio: "Dr. Naim A. Mansuri leads Advance Speech & Hearing Clinic with a focus on precise diagnosis and personalized hearing aid fitting. With years of clinical experience across multiple Gujarat locations, he has helped hundreds of patients — from newborns to seniors — regain clear hearing and confident communication."
 
 - CTA banner
 
@@ -240,7 +240,7 @@ Template: Banner with service name → left column (image + 3 text sections) →
 
 *What Are Hearing Assessments?*
 
-"A hearing assessment is a set of diagnostic tests used to measure how well a person hears across different frequencies and volumes. At Advance Speech and Hearing Clinic, our assessments are carried out by trained audiologists using calibrated equipment, giving an accurate picture of a patient's hearing health in a single visit."
+"A hearing assessment is a set of diagnostic tests used to measure how well a person hears across different frequencies and volumes. At Advance Speech & Hearing Clinic, our assessments are carried out by trained audiologists using calibrated equipment, giving an accurate picture of a patient's hearing health in a single visit."
 
 "Assessments are suitable for children as young as a few months old through to seniors, and results guide every next step — whether that's monitoring, a hearing aid recommendation, or referral for further treatment."
 
@@ -260,7 +260,7 @@ Consider booking an assessment if: You often ask people to repeat themselves · 
 
 *Understanding Hearing Aid Fitting*
 
-"Fitting a hearing aid is more than picking a device off a shelf — it's a guided process that matches the aid's settings to a patient's exact hearing profile and daily lifestyle. At Advance Speech and Hearing Clinic, every fitting starts with a full assessment and ends with real-world testing."
+"Fitting a hearing aid is more than picking a device off a shelf — it's a guided process that matches the aid's settings to a patient's exact hearing profile and daily lifestyle. At Advance Speech & Hearing Clinic, every fitting starts with a full assessment and ends with real-world testing."
 
 "Whether it's a first-time hearing aid or an upgrade, our audiologists walk patients through each step so the result feels natural and comfortable from day one."
 

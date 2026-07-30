@@ -5,13 +5,13 @@ const slides = [
     id: 0,
     desktopImage: "/images/hero1.png",
     mobileImage: "/images/hero1-mobile.png",
-    alt: "Hearing aid fitting — Advance Speech and Hearing Clinic",
+    alt: "Hearing aid fitting — Advance Speech & Hearing Clinic",
   },
   {
     id: 1,
     desktopImage: "/images/hero2.png",
     mobileImage: "/images/ear-exam-mobile.png",
-    alt: "Ear examination — Advance Speech and Hearing Clinic",
+    alt: "Ear examination — Advance Speech & Hearing Clinic",
   },
 ];
 

@@ -1,5 +1,5 @@
 export const clinic = {
-  name: "Advance Speech and Hearing Clinic",
+  name: "Advance Speech & Hearing Clinic",
   shortName: "Advance S&H Clinic",
   tagline: "Trusted hearing and speech care across Gujarat.",
   phone: "+91 99790 02527",
