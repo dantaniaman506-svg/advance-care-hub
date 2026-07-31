@@ -66,7 +66,7 @@ export default function AppointmentPage() {
                   </li>
                   <li className="flex items-start gap-3 text-sm text-[#54595F]">
                     <CheckCircle className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
-                    Led by Dr. Naim A. Mansuri — 35+ years experience
+                    Led by Dr. Naim A. Mansuri — personalised audiological care
                   </li>
                 </ul>
               </div>

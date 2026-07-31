@@ -122,7 +122,7 @@ xs: 1em · sm: 1.5rem · md: 2rem · lg: 2.5em · xl: 3.5em · xxl: 5rem
 
 - Column 2 "Explore": Home, Services, About Us, Doctors, Locations, Contact Us
 
-- Column 3 "Services": Hearing Assessments, Hearing Aids & Fitting, Cochlear Implants, Tinnitus Management, Speech & Language Therapy
+- Column 3 "Services": Hearing Assessments, Hearing Aids & Fitting, Tinnitus Management, Speech & Language Therapy
 
 - Column 4 "Contact": WhatsApp/phone +91 99790 02527, head office address (Gandhinagar), link to full Locations page
 
@@ -202,7 +202,7 @@ Fields: Your Name, Your Phone/Email, Subject, Message (optional), Submit button.
 
   - **Dr. Naim A. Mansuri** — Consultant Audiologist
 
-  - Bio: "Dr. Naim A. Mansuri leads Advance Speech & Hearing Clinic with a focus on precise diagnosis and personalized hearing aid fitting. With years of clinical experience across multiple Gujarat locations, he has helped hundreds of patients — from newborns to seniors — regain clear hearing and confident communication."
+  - Bio: "Dr. Naim A. Mansuri leads Advance Speech & Hearing Clinic with a focus on precise diagnosis and personalized hearing aid fitting across multiple Gujarat locations."
 
 - CTA banner
 
@@ -216,9 +216,7 @@ Same 9-category grid as Home, full width, each linking to its own detail page:
 
 2. **Hearing Aids & Fitting** — "Digital hearing aids programmed and fitted to match each patient's hearing profile and daily routine." — Behind-the-Ear (BTE), In-the-Ear (ITE), Completely-in-Canal (CIC), Rechargeable Bluetooth Aids, Real Ear Measurement (REM), Ear Mould Impression
 
-3. **Cochlear Implants** — "Evaluation, surgical coordination, and rehabilitation support for patients with severe to profound hearing loss." — Implant Suitability Assessment, Surgical Coordination, MAP Programming, Rehabilitation Therapy
-
-4. **Tinnitus Management** — "Structured programs to help patients manage chronic ringing in the ears and improve day-to-day comfort." — Sound Therapy Devices, Tinnitus Retraining Therapy (TRT), Relaxation Coaching, Noise Masking Systems
+3. **Tinnitus Management** — "Structured programs to help patients manage chronic ringing in the ears and improve day-to-day comfort." — Sound Therapy Devices, Tinnitus Retraining Therapy (TRT), Relaxation Coaching, Noise Masking Systems
 
 5. **Speech & Language Therapy** — "Therapy for children and adults working to improve speech clarity, language skills, and communication confidence." — Articulation Therapy, Language Delay Intervention, Fluency & Stuttering Correction, Voice Therapy
 
@@ -276,27 +274,7 @@ Every patient's ear shape, hearing thresholds, and lifestyle are different. Our 
 
 "This ensures every hearing aid we fit is not just functional, but fully optimized for the patient wearing it."
 
-**— Cochlear Implants —**
-
-*What Are Cochlear Implants?*
-
-"Cochlear implants are medical devices designed for people with severe to profound hearing loss who get limited benefit from hearing aids. Unlike hearing aids, which amplify sound, a cochlear implant bypasses the damaged part of the ear and stimulates the auditory nerve directly."
-
-"For patients who haven't found success with hearing aids, a cochlear implant can offer a meaningful return to clearer hearing, improving communication and daily independence."
-
-*How Cochlear Implants Work*
-
-"An external processor picks up sound and converts it into a digital signal. That signal is sent to an internal implant, which stimulates the auditory nerve directly — bypassing the damaged cochlea. The brain interprets these signals as sound."
-
-"Cochlear implant technology continues to improve, offering better sound quality and clearer speech recognition, even in noisy environments."
-
-*Who Can Benefit From Cochlear Implants?*
-
-Cochlear implants may be suitable for patients who: Have severe to profound hearing loss in both ears · See limited improvement from hearing aids · Score below 50% on speech recognition tests (even with hearing aids) · Are medically fit for surgery · Are committed to post-implant rehabilitation
-
-"Children as young as 12 months and adults of any age can be evaluated for suitability."
-
-**For the remaining 6 services** (Tinnitus Management, Speech & Language Therapy, Pediatric Audiology, Home Visits & Tele-Audiology, Assistive Listening Devices, Hearing Aid Repair & Maintenance): follow the same 3-section pattern (What is it? / Why it matters / Who should consider it), using the one-liner description and bullet list from the Services Overview section above, and write 2 short original paragraphs per section in the same tone as the examples.
+**For the remaining services** (Tinnitus Management, Speech & Language Therapy, Pediatric Audiology, Home Visits & Tele-Audiology, Assistive Listening Devices, Hearing Aid Repair & Maintenance): follow the same 3-section pattern (What is it? / Why it matters / Who should consider it), using the one-liner description and bullet list from the Services Overview section above, and write 2 short original paragraphs per section in the same tone as the examples.
 
 ### 6. Locations / Contact
 

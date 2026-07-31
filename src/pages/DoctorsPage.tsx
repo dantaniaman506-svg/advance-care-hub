@@ -62,14 +62,14 @@ export default function DoctorsPage() {
             <p className="eyebrow mb-3">Our Lead Specialist</p>
             <h2 className="text-3xl font-bold text-[#1A202C] mb-4">Dr. Naim A. Mansuri</h2>
             <p className="text-[#4A5568] leading-relaxed mb-4">
-              Dr. Naim A. Mansuri is the lead Consultant Audiologist at Advance Speech and Hearing
+              Dr. Naim A. Mansuri is the lead Consultant Audiologist at Advance Speech & Hearing
               Clinic, providing specialist clinical care in audiology and hearing
               rehabilitation across Gujarat.
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-4">
               He specialises in comprehensive audiological diagnostics, personalised digital hearing
-              aid fitting, cochlear implant candidacy assessment, tinnitus management, and paediatric
-              audiology — serving patients from newborns through to seniors.
+              aid fitting, tinnitus management, and paediatric audiology — serving patients from
+              newborns through to seniors.
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-6">
               Dr. Mansuri's approach combines state-of-the-art diagnostic equipment with a
@@ -81,7 +81,6 @@ export default function DoctorsPage() {
               {[
                 "Comprehensive Hearing Assessments (PTA, ABR, OAE, ASSR)",
                 "Digital Hearing Aid Fitting & Verification",
-                "Cochlear Implant Candidacy & Post-Op Mapping",
                 "Paediatric Audiology & Early Intervention",
                 "Tinnitus Assessment & Management",
                 "Speech Therapy Oversight",

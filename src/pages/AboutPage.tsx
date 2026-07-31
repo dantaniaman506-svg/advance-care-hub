@@ -40,7 +40,7 @@ export default function AboutPage() {
             </p>
             <p className="text-[#4A5568] leading-relaxed mb-5">
               Our clinic offers the full spectrum of audiology and speech therapy services — from
-              newborn hearing screening to complex cochlear implant candidacy assessments — all
+              newborn hearing screening to advanced diagnostic assessments — all
               under one roof, led by our Consultant Audiologist Dr. Naim A. Mansuri.
             </p>
             <ul className="space-y-2.5">
@@ -78,7 +78,7 @@ export default function AboutPage() {
               {
                 icon: <Award className="h-7 w-7 text-white" />,
                 title: "Expert-Led Care",
-                desc: "Dr. Naim A. Mansuri brings over 35 years of clinical audiological experience to every consultation.",
+                desc: "Our experienced clinical team provides careful, personalised audiological care at every consultation.",
               },
               {
                 icon: <Users className="h-7 w-7 text-white" />,

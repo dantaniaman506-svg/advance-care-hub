@@ -88,29 +88,6 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "cochlear-implants",
-    title: "Cochlear Implant Support",
-    icon: "",
-    oneLiner:
-      "Pre-implant evaluation, post-implant mapping, and rehabilitation services for cochlear implant candidates and recipients.",
-    bullets: [
-      "Pre-Implant Candidacy Assessment",
-      "Post-Implant Device Mapping",
-      "Auditory-Verbal Rehabilitation",
-      "Family Counselling & Guidance",
-      "School Reintegration Support",
-    ],
-    sections: [
-      {
-        heading: "Cochlear Implant Services",
-        paragraphs: [
-          "We support patients through every stage of the cochlear implant journey — from the initial candidacy assessment to long-term post-operative rehabilitation.",
-          "Our audiologists work closely with surgical teams and families to optimise outcomes and ensure the best possible hearing and communication results.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "tinnitus-management",
     title: "Tinnitus Management",
     icon: "",
