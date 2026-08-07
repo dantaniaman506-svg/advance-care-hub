@@ -1,0 +1,76 @@
+Website Changes
+
+1) Mon - Sat -> open all 7 day -> ✗   (open 6 days)
+
+2) Ahmedabad, Gandhinagar, Patan & Surudranagar
+
+3) Patan Address - opp old st Bus Stend    ohat Bhagwati
+                     Nagor Patan
+
+4) Ahmedabad -> 108  1st Floor   Bluewater Building
+                (As Per Brouchure)
+
+5) Gandhinagar (Siraj Bhai No add)
+
+6) our Doctor -> know Your Doctor
+
+7) Address check in all
+
+8) Info -> need to change -> [Email Remove]
+   ~~advance~~
+
+9) Add Visitng Branches
+
+10) PTA, IMPEDENCE, OAE, ASSR, ABR
+    (About Doctor)
+
+11) Contact form (Remove Text and add
+                  whatsapp in every Form)
+
+12) Add Link on Insta & fb
+
+—— ✗ —— ✗ —— ✗ —— ✗ —— ✗
+
+
+
+Point 1: Dekho, main ek-ek karke changes bolta jaa raha hoon, point-wise. Jo first point hai, Monday to Saturday open hai, not 7 days open hai.
+Point 2: Second point ye hai ki Ahmedabad, Kanti Nagar, Patan, aur Surendranagar—ye sequence mein ye apna kya bolte hain, woh offices, matlab jo branches hain na, waisa.
+Point 3: Third, Patan address mein na change karna hai. Rakhna kaise, main aapko batata hoon: opposite old bus stand, Bhagwati Nagar, Patan, waisa rakhna hai.
+Point 4: Ahmedabad ka jo address hai, usme 108 first floor Blue Water building aisa rakhna hai.
+Point 5: Ye apna Patan wala ho gaya, Ahmedabad wala ho gaya. Phir fifth point, Kanti Nagar mein Siraj bhai ka number add karna hai. Woh number main aapko bhejta hoon.
+Point 6: Sixth, "A Doctor" jo likha hai na home page pe, uski jagah likhna hai "Know Your Doctor".
+Point 7: Seventh, address check in all. Haan, ye apna address na woh har page ke andar ek baar aap check kar lena.
+Point 8: Dusra ye ki email ID jo likha hua hai na poore website mein, woh email ID remove hi kar dena hai.
+address plus visiting branch others, aisa khali likh dena. Ya phir maan lo char address hai na, char address plus others, khali aisa likh do, kyunki woh aur teen-chaar jagah jaate hain, par woh visiting branch hai, toh woh khali "others" likhna hai usmein.
+Point 10: 10th point hai ki jo doctor ka ye hai na, about us mein doctor mein jo unka kya bolte hain, expertise, usmein likha hua "PTA", phir "Inpendence" (IMPEDANCE), "OAE", "AASR", aur "ABR"—ye sequence mein likhna hai.
+Point 11: Phir 11th point hai, contact form. Contact form mein na, aapne ye apna ek-do form mein text message hai, baaki sab mein WhatsApp pe ja raha hai, toh woh sab mein WhatsApp pe hi jaana chahiye, theek hai?
+Point 12: Aur 12th point hai, ki Insta, Facebook ki link add karni hai.
+
+99786 19900 mobile number 
+
+https://www.instagram.com/advance_speechandhearingclinic?igsh=MWFzOWlqOWNxY3JrMg==
+
+https://www.facebook.com/share/1Kcy51GmiC/
+
+Jab sb hi jaye git hub pe push kardio aur apna dimaag lgaio har jagah aur sb shi kario smjha 
+
+Bhai esa koi error nhi ana chaiye smjha 
+
+Bhai error Ara hai and mujhe nhi pta ki git hub pe push hua hai ki nhi but jab manie vercle pe deploy kara toh yeah error Ara hai issko shi kar
+10:30:06.782 Running build in Washington, D.C., USA (East) – iad1
+10:30:06.783 Build machine configuration: 2 cores, 8 GB
+10:30:06.917 Cloning github.com/dantaniaman506-svg/advance-care-hub (Branch: main, Commit: f328548)
+10:30:08.529 Cloning completed: 1.611s
+10:30:08.612 Restored build cache from previous deployment (6qewSNnGhpq2Ro1KiDSmgse3aJpt)
+10:30:08.836 Running "vercel build"
+10:30:08.859 Vercel CLI 58.1.0
+10:30:09.348 Warning: Detected "engines": { "node": ">=20" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version
+10:30:09.355 Installing dependencies...
+10:31:23.299 npm error Exit handler never called!
+10:31:23.299 npm error This is an error with npm itself. Please report this error at:
+10:31:23.299 npm error   <https://github.com/npm/cli/issues>
+10:31:23.300 npm error A complete log of this run can be found in: /vercel/.npm/_logs/2026-08-07T05_00_09_477Z-debug-0.log
+10:31:23.334 Error: Command "npm install" exited with 1
+
+
+
