@@ -5,6 +5,8 @@ import { branches, visitingBranch } from "@/data/branches";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 
+const headOffice = branches.find((branch) => branch.isHeadOffice) ?? branches[0];
+
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: "",
@@ -52,11 +54,16 @@ export default function ContactPage() {
                     <MapPin className="h-4.5 w-4.5 text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1A202C] text-sm mb-0.5">Kanti Nagar Head Office</p>
-                    <p className="text-sm text-[#54595F] leading-relaxed">
-                      Shagun-11, Above Croma Center,<br />
-                      Sector 11, Gandhinagar, Gujarat 382010
-                    </p>
+                    <p className="font-semibold text-[#1A202C] text-sm mb-0.5">{headOffice.name}</p>
+                    <p className="text-sm text-[#54595F] leading-relaxed">{headOffice.address}</p>
+                    {headOffice.phone && (
+                      <a
+                        href={`tel:${headOffice.phone.replace(/\s/g, "")}`}
+                        className="text-sm text-[#A93539] hover:underline"
+                      >
+                        Branch: {headOffice.phone}
+                      </a>
+                    )}
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

@@ -102,7 +102,7 @@ export default function HomePage() {
             <p className="text-sm font-medium text-white/80 mb-3">Opening Hours</p>
             <div className="space-y-2 text-sm">
               <div className="flex justify-center gap-8 border-b border-white/10 pb-2">
-                <span className="text-white/70">Mon – Sun</span>
+                 <span className="text-white/70">Mon – Sat</span>
                 <span className="font-semibold">10:00 AM – 7:00 PM</span>
               </div>
               <div className="flex justify-center gap-8 text-white/50 text-xs">

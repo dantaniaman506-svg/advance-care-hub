@@ -4,6 +4,7 @@ export type Branch = {
   city: string;
   address: string;
   phone?: string;
+  isHeadOffice?: boolean;
   mapEmbed: string;
   mapsLink: string;
 };
@@ -20,11 +21,12 @@ export const branches: Branch[] = [
   },
   {
     id: "gandhinagar",
-    name: "Kanti Nagar (Gandhinagar)",
+    name: "Gandhinagar Branch (Kanti Nagar)",
     city: "Gandhinagar",
     address:
       "3rd Floor, 307, Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010",
     phone: "+91 99786 19900",
+    isHeadOffice: true,
     mapEmbed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.0!2d72.6369!3d23.2156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sShagun+11+Sector+11+Gandhinagar!5e0!3m2!1sen!2sin!4v1",
     mapsLink: "https://www.google.com/maps?q=Shagun-11+Sector+11+Gandhinagar+Gujarat",
@@ -43,7 +45,7 @@ export const branches: Branch[] = [
     id: "surendranagar",
     name: "Surendranagar Branch",
     city: "Surendranagar",
-    address: "Surendranagar, Gujarat (full address coming soon)",
+    address: "Surendranagar, Gujarat",
     mapEmbed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.0!2d71.6495!3d22.7289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSurendranagar+Gujarat!5e0!3m2!1sen!2sin!4v1",
     mapsLink: "https://www.google.com/maps?q=Surendranagar+Gujarat",
@@ -53,5 +55,5 @@ export const branches: Branch[] = [
 export const visitingBranch = {
   id: "visiting-branches",
   name: "Visiting Branches / Others",
-  address: "Address to be confirmed",
+  address: "Address confirmed on WhatsApp",
 };

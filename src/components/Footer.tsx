@@ -2,33 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, MapPin, Clock } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
 import { services } from "@/data/services";
-
-const footerAddresses = [
-  {
-    city: "Kanti Nagar",
-    label: "Gandhinagar Head Office",
-    address: "3rd Floor, 307, Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010",
-    phone: "+91 99786 19900",
-  },
-  {
-    city: "Patan",
-    label: "Patan Branch",
-    address: "Opp. Old Bus Stand, Bhagwati Nagar, Patan, Gujarat 384265",
-    phone: "+91 97242 82527",
-  },
-  {
-    city: "Ahmedabad",
-    label: "Ahmedabad Branch",
-    address: "108, 1st Floor, Bluewater Building, Ahmedabad, Gujarat",
-    phone: "",
-  },
-  {
-    city: "Surendranagar",
-    label: "Surendranagar Branch",
-    address: "Surendranagar, Gujarat",
-    phone: "",
-  },
-];
+import { branches } from "@/data/branches";
 
 export default function Footer() {
   return (
@@ -38,23 +12,25 @@ export default function Footer() {
       <div style={{ background: "linear-gradient(90deg, #8B2B2E 0%, #A93539 52%, #B84448 100%)" }} className="py-8">
         <div className="container-page">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {footerAddresses.map((loc) => (
-              <div key={loc.city} className="flex gap-3">
+            {branches.map((branch) => (
+              <div key={branch.id} className="flex gap-3">
                 <div className="mt-0.5 shrink-0">
                   <MapPin className="h-4 w-4 text-white/80" />
                 </div>
                 <div>
                   <div className="font-bold text-white text-sm mb-0.5">
-                    {loc.city}
-                    <span className="font-normal text-white/70 text-xs ml-1.5">({loc.label})</span>
+                    {branch.city}
+                    <span className="font-normal text-white/70 text-xs ml-1.5">
+                      ({branch.isHeadOffice ? "Head Office" : "Branch"})
+                    </span>
                   </div>
-                  <p className="text-xs text-white/80 leading-relaxed">{loc.address}</p>
-                  {loc.phone && (
+                  <p className="text-xs text-white/80 leading-relaxed">{branch.address}</p>
+                  {branch.phone && (
                     <a
-                      href={`tel:${loc.phone.replace(/\s/g, "")}`}
+                      href={`tel:${branch.phone.replace(/\s/g, "")}`}
                       className="text-xs text-white font-medium mt-1 inline-flex items-center gap-1 hover:underline"
                     >
-                      <Phone className="h-3 w-3" /> {loc.phone}
+                      <Phone className="h-3 w-3" /> {branch.phone}
                     </a>
                   )}
                 </div>
@@ -143,7 +119,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
                 <span className="text-sm text-white/65 leading-relaxed">
-                  Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010
+                  3rd Floor, 307, Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010
                 </span>
               </li>
               <li className="flex items-center gap-3">

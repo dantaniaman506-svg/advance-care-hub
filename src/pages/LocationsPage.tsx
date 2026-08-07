@@ -44,7 +44,7 @@ export default function LocationsPage() {
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-3 mb-4">
                       <h3 className="font-bold text-[#1A202C] text-lg">{branch.name}</h3>
-                      {i === 0 && (
+                       {branch.isHeadOffice && (
                         <span
                           className="shrink-0 text-xs px-2 py-1 text-white font-medium"
                           style={{ backgroundColor: "#A93539" }}
