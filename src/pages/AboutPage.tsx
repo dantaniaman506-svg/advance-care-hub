@@ -48,7 +48,7 @@ export default function AboutPage() {
                 "Calibrated, state-of-the-art diagnostic equipment",
                 "Evidence-based treatment protocols",
                 "Personalised care for every age group",
-                "4 branches — open all 7 days, closes 7 PM",
+                "4 branches — open Monday to Saturday, closes 7 PM",
                 "WhatsApp appointments for your convenience",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-[#54595F]">
@@ -97,8 +97,8 @@ export default function AboutPage() {
               },
               {
                 icon: <Calendar className="h-7 w-7 text-white" />,
-                title: "Open All 7 Days",
-                desc: "We are open every day of the week, closing at 7:00 PM, to fit around your schedule.",
+                title: "Open 6 Days",
+                desc: "We are open Monday to Saturday, closing at 7:00 PM, to fit around your schedule.",
               },
               {
                 icon: <Heart className="h-7 w-7 text-white" />,

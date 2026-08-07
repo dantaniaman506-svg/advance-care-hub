@@ -10,7 +10,7 @@ export default function LocationsPage() {
     <>
       <PageBanner
         title="Our Locations"
-        subtitle="4 convenient branches across Gujarat"
+        subtitle="Ahmedabad, Kanti Nagar, Patan & Surendranagar"
         breadcrumb={[{ label: "Locations" }]}
       />
 
@@ -21,7 +21,7 @@ export default function LocationsPage() {
               <p className="eyebrow mb-2">Visit Us</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A202C]">Our Branches</h2>
               <p className="mt-3 text-[#54595F] max-w-xl mx-auto text-sm">
-                All our clinics are open every day of the week and close at 7:00 PM.
+                All our clinics are open Monday to Saturday and close at 7:00 PM.
               </p>
             </div>
           </Reveal>
@@ -80,7 +80,7 @@ export default function LocationsPage() {
                       </div>
                       <div className="flex items-center gap-3">
                         <Clock className="h-4 w-4 shrink-0" style={{ color: "#A93539" }} />
-                        <span className="text-sm text-[#54595F]">Open All Days — Closes 7:00 PM</span>
+                        <span className="text-sm text-[#54595F]">Open Monday – Saturday — Closes 7:00 PM</span>
                       </div>
                     </div>
                     <div className="mt-5">
@@ -99,6 +99,14 @@ export default function LocationsPage() {
               </Reveal>
             ))}
           </div>
+          <Reveal delay={400}>
+            <div className="mt-8 bg-white service-card p-6 border-l-4" style={{ borderColor: "#A93539" }}>
+              <h3 className="font-bold text-[#1A202C] text-lg mb-2">Visiting Branches / Others</h3>
+              <p className="text-sm text-[#54595F]">
+                Our team also visits other locations. Please choose this option while booking and confirm the address with us on WhatsApp.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -107,7 +115,7 @@ export default function LocationsPage() {
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-white text-center sm:text-left">
             <h3 className="text-2xl font-bold mb-1 text-white">Book at Your Nearest Branch</h3>
-            <p className="text-white/80 text-sm">All 4 locations open 7 days a week</p>
+            <p className="text-white/80 text-sm">All 4 locations open Monday to Saturday</p>
           </div>
           <Link to="/appointment" className="btn-navy shrink-0">
             Book Appointment

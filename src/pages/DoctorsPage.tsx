@@ -8,7 +8,7 @@ export default function DoctorsPage() {
   return (
     <>
       <PageBanner
-        title="Our Doctor"
+        title="Know Your Doctor"
         subtitle="Meet the specialist behind Advance Speech & Hearing Clinic"
         breadcrumb={[{ label: "Doctors" }]}
       />
@@ -30,12 +30,12 @@ export default function DoctorsPage() {
               <h2 className="text-3xl font-bold text-white">Dr. Naim A. Mansuri</h2>
               <p className="text-white/60 mt-2 text-base">Consultant Audiologist</p>
               <div className="w-12 h-0.5 my-5" style={{ backgroundColor: "#A93539" }} />
-              <div className="grid grid-cols-2 gap-6 w-full text-center">
+                <div className="grid grid-cols-2 gap-6 w-full text-center">
                 <div>
                   <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
-                    <AnimatedCount value={7} />
+                    <AnimatedCount value={6} />
                   </div>
-                  <div className="text-xs text-white/50 mt-1">Days a Week</div>
+                    <div className="text-xs text-white/50 mt-1">Days a Week</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold" style={{ color: "#A93539" }}>
@@ -76,10 +76,14 @@ export default function DoctorsPage() {
               compassionate, patient-centred ethos that has made the clinic the most trusted hearing
               care destination across Gujarat.
             </p>
-            <h3 className="font-bold text-[#1A202C] mb-3">Areas of Expertise</h3>
+              <h3 className="font-bold text-[#1A202C] mb-3">Areas of Expertise</h3>
             <ul className="space-y-2 mb-7">
               {[
-                "Comprehensive Hearing Assessments (PTA, ABR, OAE, ASSR)",
+                "PTA (Pure Tone Audiometry)",
+                "IMPEDANCE",
+                "OAE",
+                "ASSR",
+                "ABR",
                 "Digital Hearing Aid Fitting & Verification",
                 "Paediatric Audiology & Early Intervention",
                 "Tinnitus Assessment & Management",

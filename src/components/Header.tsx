@@ -7,7 +7,7 @@ import { clinic, whatsappLink } from "@/data/clinic";
 const navItems = [
   { to: "/", label: "Home", exact: true },
   { to: "/services", label: "Services", hasSub: true },
-  { to: "/doctors", label: "Doctors" },
+  { to: "/doctors", label: "Know Your Doctor" },
   { to: "/about", label: "About Us" },
   { to: "/locations", label: "Locations" },
   { to: "/contact", label: "Contact Us" },

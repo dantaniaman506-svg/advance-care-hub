@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, ChevronDown } from "lucide-react";
+import { Phone, MapPin, Clock, Send, ChevronDown, CheckCircle } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
-import { branches } from "@/data/branches";
+import { branches, visitingBranch } from "@/data/branches";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 
@@ -16,6 +16,15 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const branch = [...branches, visitingBranch].find((b) => b.id === form.branch);
+    const message =
+      `Hello! I'd like to enquire about the clinic.\n\n` +
+      `Name: ${form.name}\n` +
+      `Phone: ${form.phone}\n` +
+      `Branch: ${branch?.name ?? form.branch}\n` +
+      `Address: ${branch?.address ?? "Not specified"}\n` +
+      (form.message ? `Message: ${form.message}\n` : "");
+    window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 
@@ -43,7 +52,7 @@ export default function ContactPage() {
                     <MapPin className="h-4.5 w-4.5 text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1A202C] text-sm mb-0.5">Head Office</p>
+                    <p className="font-semibold text-[#1A202C] text-sm mb-0.5">Kanti Nagar Head Office</p>
                     <p className="text-sm text-[#54595F] leading-relaxed">
                       Shagun-11, Above Croma Center,<br />
                       Sector 11, Gandhinagar, Gujarat 382010
@@ -72,29 +81,12 @@ export default function ContactPage() {
                     className="w-10 h-10 flex items-center justify-center shrink-0"
                     style={{ backgroundColor: "#A93539" }}
                   >
-                    <Mail className="h-4.5 w-4.5 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1A202C] text-sm mb-0.5">Email</p>
-                    <a
-                      href={`mailto:${clinic.email}`}
-                      className="text-sm text-[#54595F] hover:text-[#A93539] transition-colors"
-                    >
-                      {clinic.email}
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: "#A93539" }}
-                  >
                     <Clock className="h-4.5 w-4.5 text-white" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A202C] text-sm mb-0.5">Opening Hours</p>
                     <p className="text-sm text-[#54595F]">
-                      Monday – Sunday<br />
+                      Monday – Saturday<br />
                       10:00 AM – 7:00 PM
                     </p>
                   </div>
@@ -136,13 +128,13 @@ export default function ContactPage() {
           <div className="lg:col-span-3">
             <Reveal delay={100}>
               <div className="service-card p-8 bg-white">
-                <h3 className="text-xl font-bold text-[#1A202C] mb-6">Send Us a Message</h3>
+                <h3 className="text-xl font-bold text-[#1A202C] mb-6">Contact Us on WhatsApp</h3>
                 {submitted ? (
                   <div className="py-12 text-center">
                     <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: "#A93539" }}>
                       <CheckCircle className="h-8 w-8 text-white" />
                     </div>
-                    <h4 className="text-xl font-bold text-[#1A202C] mb-2">Message Sent!</h4>
+                    <h4 className="text-xl font-bold text-[#1A202C] mb-2">Request Sent to WhatsApp!</h4>
                     <p className="text-[#54595F] text-sm">
                       Thank you for reaching out. We'll get back to you shortly on{" "}
                       <strong>{clinic.phone}</strong>.
@@ -199,7 +191,7 @@ export default function ContactPage() {
                           style={{ cursor: "pointer" }}
                         >
                           <option value="">— Choose your nearest branch —</option>
-                          {branches.map((b) => (
+                          {[...branches, visitingBranch].map((b) => (
                             <option key={b.id} value={b.id}>
                               {b.name} — {b.address}
                             </option>
@@ -213,7 +205,7 @@ export default function ContactPage() {
                           style={{ backgroundColor: "#1A202C" }}
                         >
                           <strong>Selected:</strong>{" "}
-                          {branches.find((b) => b.id === form.branch)?.address}
+                          {[...branches, visitingBranch].find((b) => b.id === form.branch)?.address}
                         </div>
                       )}
                     </div>
@@ -233,7 +225,7 @@ export default function ContactPage() {
 
                     <button type="submit" className="btn-primary w-full justify-center">
                       <Send className="h-4 w-4" />
-                      Send Message
+                      Send on WhatsApp
                     </button>
                   </form>
                 )}

@@ -143,8 +143,8 @@ export default function HomePage() {
               Advance Speech &amp; Hearing Clinic offers comprehensive hearing
               care services — hearing assessments, hearing aid fitting,
               programming, adjustment, maintenance, and repair — across multiple
-              branches in Gujarat including Gandhinagar, Ahmedabad, Surendranagar,
-              Patan, Mehsana, and Himmatnagar.
+              branches in Gujarat including Ahmedabad, Kanti Nagar, Patan, and
+              Surendranagar.
             </p>
             <Link to="/about" className="btn-primary">
               Know More
@@ -350,7 +350,7 @@ export default function HomePage() {
               Book a Free Hearing Consultation
             </h3>
             <p className="text-white/80 text-sm">
-              Multiple locations across Gujarat • Open all 7 days • Dr. Naim A.
+              Multiple locations across Gujarat • Open Monday to Saturday • Dr. Naim A.
               Mansuri
             </p>
           </div>
@@ -403,7 +403,7 @@ export default function HomePage() {
                   )}
                   <div className="text-xs text-[#718096] flex items-center gap-1.5 mt-2">
                     <Clock className="h-3 w-3" style={{ color: "#A93539" }} />
-                    Open All Days — Closes 7 PM
+                    Open Mon – Sat — Closes 7 PM
                   </div>
                 </div>
               </Reveal>
@@ -454,15 +454,15 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 {
-                  title: "6 Locations",
-                  desc: "Gandhinagar, Ahmedabad, Patan, Surendranagar, Mehsana & Himmatnagar",
+                  title: "4 Locations",
+                  desc: "Ahmedabad, Kanti Nagar, Patan & Surendranagar",
                 },
                 {
-                  title: "Open 7 Days",
-                  desc: "We are open every day of the week",
+                  title: "Open 6 Days",
+                  desc: "We are open Monday to Saturday",
                 },
                 {
-                  title: "Expert Doctor",
+                  title: "Know Your Doctor",
                   desc: "Dr. Naim A. Mansuri — Consultant Audiologist",
                 },
                 {

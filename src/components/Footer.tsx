@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
 import { services } from "@/data/services";
 
 const footerAddresses = [
   {
-    city: "Gandhinagar",
-    label: "Head Office",
+    city: "Kanti Nagar",
+    label: "Gandhinagar Head Office",
     address: "3rd Floor, 307, Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010",
-    phone: "+91 99790 02527",
+    phone: "+91 99786 19900",
   },
   {
     city: "Patan",
     label: "Patan Branch",
-    address: "1st Floor, Pandya Complex, Opp. Old S.T. Bus Stop, Krishnanagar Society, Hansapur Part, Patan, Gujarat 384265",
+    address: "Opp. Old Bus Stand, Bhagwati Nagar, Patan, Gujarat 384265",
     phone: "+91 97242 82527",
   },
   {
     city: "Ahmedabad",
-    label: "Sarkhej Branch",
-    address: "First Floor, Blue Water, 108, Amber Tower Rd, Near Bushra Hospital, Arshad Park, Sarkhej, Ahmedabad, Gujarat 380055",
+    label: "Ahmedabad Branch",
+    address: "108, 1st Floor, Bluewater Building, Ahmedabad, Gujarat",
     phone: "",
   },
   {
@@ -84,10 +84,10 @@ export default function Footer() {
             </p>
             {/* Social */}
             <div className="flex items-center gap-3">
-              <a href="#" aria-label="Facebook" className="w-8 h-8 flex items-center justify-center border border-white/20 hover:border-[#A93539] hover:bg-[#A93539] transition-colors">
+              <a href={clinic.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 flex items-center justify-center border border-white/20 hover:border-[#A93539] hover:bg-[#A93539] transition-colors">
                 <svg className="h-3.5 w-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
-              <a href="#" aria-label="Instagram" className="w-8 h-8 flex items-center justify-center border border-white/20 hover:border-[#A93539] hover:bg-[#A93539] transition-colors">
+              <a href={clinic.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 flex items-center justify-center border border-white/20 hover:border-[#A93539] hover:bg-[#A93539] transition-colors">
                 <svg className="h-3.5 w-3.5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
               </a>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-8 h-8 flex items-center justify-center border border-white/20 hover:border-[#25D366] hover:bg-[#25D366] transition-colors">
@@ -121,7 +121,7 @@ export default function Footer() {
               {[
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About Us" },
-                { to: "/doctors", label: "Our Doctor" },
+                { to: "/doctors", label: "Know Your Doctor" },
                 { to: "/locations", label: "Locations" },
                 { to: "/appointment", label: "Book Appointment" },
                 { to: "/contact", label: "Contact Us" },
@@ -150,16 +150,15 @@ export default function Footer() {
                 <Phone className="h-4 w-4 shrink-0" style={{ color: "#A93539" }} />
                 <a href={`tel:${clinic.phoneRaw}`} className="footer-link text-sm">{clinic.phone}</a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-4 w-4 shrink-0" style={{ color: "#A93539" }} />
-                <a href={`mailto:${clinic.email}`} className="footer-link text-sm">{clinic.email}</a>
-              </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
                 <span className="text-sm text-white/65">
-                  Open All 7 Days<br />
+                  Open Monday – Saturday<br />
                   10:00 AM – 7:00 PM
                 </span>
+              </li>
+              <li className="text-sm text-white/65">
+                Visiting Branches / Others available by WhatsApp confirmation
               </li>
             </ul>
           </div>

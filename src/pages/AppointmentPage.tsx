@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, Calendar, Phone, CheckCircle } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
-import { branches } from "@/data/branches";
+import { branches, visitingBranch } from "@/data/branches";
 import { services } from "@/data/services";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
@@ -19,7 +19,7 @@ export default function AppointmentPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const branch = branches.find((b) => b.id === form.branch);
+    const branch = [...branches, visitingBranch].find((b) => b.id === form.branch);
     const msg =
       `Hello! I'd like to book an appointment.\n\n` +
       `Name: ${form.name}\n` +
@@ -54,7 +54,7 @@ export default function AppointmentPage() {
                   </li>
                   <li className="flex items-start gap-3 text-sm text-[#54595F]">
                     <CheckCircle className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
-                    Open all 7 days — closes 7:00 PM
+                    Open Monday to Saturday — closes 7:00 PM
                   </li>
                   <li className="flex items-start gap-3 text-sm text-[#54595F]">
                     <CheckCircle className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
@@ -90,7 +90,7 @@ export default function AppointmentPage() {
               <div className="p-6 text-white" style={{ backgroundColor: "#1A202C" }}>
                 <Calendar className="h-6 w-6 mb-3" style={{ color: "#A93539" }} />
                 <p className="font-bold text-white mb-1">Opening Hours</p>
-                <p className="text-sm text-white/60">Monday – Sunday</p>
+                <p className="text-sm text-white/60">Monday – Saturday</p>
                 <p className="text-base font-semibold text-white mt-1">10:00 AM – 7:00 PM</p>
               </div>
             </Reveal>
@@ -176,7 +176,7 @@ export default function AppointmentPage() {
                           style={{ cursor: "pointer" }}
                         >
                           <option value="">— Choose your nearest branch —</option>
-                          {branches.map((b) => (
+                          {[...branches, visitingBranch].map((b) => (
                             <option key={b.id} value={b.id}>
                               {b.name}
                             </option>
@@ -193,10 +193,10 @@ export default function AppointmentPage() {
                           }}
                         >
                           <p className="font-semibold text-[#1A202C] text-xs mb-0.5">
-                            {branches.find((b) => b.id === form.branch)?.name}
+                            {[...branches, visitingBranch].find((b) => b.id === form.branch)?.name}
                           </p>
                           <p className="text-[#54595F] text-xs">
-                            {branches.find((b) => b.id === form.branch)?.address}
+                            {[...branches, visitingBranch].find((b) => b.id === form.branch)?.address}
                           </p>
                         </div>
                       )}
