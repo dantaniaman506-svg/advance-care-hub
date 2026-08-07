@@ -1,1 +1,2 @@
 - [Clinic logo assets](clinic-logo-assets.md) — the uploaded square logo needs a trimmed wide copy for header/footer and a separate 64px favicon copy.
+- [Imported project checks](imported-project-checks.md) — Vite scans bundled .local artifact templates, while the imported lint baseline may flag untouched formatting.
