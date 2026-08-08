@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, MapPin, Clock } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
 import { services } from "@/data/services";
-import { branches } from "@/data/branches";
+import { branches, getBranchPhones } from "@/data/branches";
 
 export default function Footer() {
   return (
@@ -25,14 +25,17 @@ export default function Footer() {
                     </span>
                   </div>
                   <p className="text-xs text-white/80 leading-relaxed">{branch.address}</p>
-                  {branch.phone && (
-                    <a
-                      href={`tel:${branch.phone.replace(/\s/g, "")}`}
-                      className="text-xs text-white font-medium mt-1 inline-flex items-center gap-1 hover:underline"
-                    >
-                      <Phone className="h-3 w-3" /> {branch.phone}
-                    </a>
-                  )}
+                  <div className="mt-1 space-y-0.5">
+                    {getBranchPhones(branch).map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/\D/g, "")}`}
+                        className="text-xs text-white font-medium block hover:underline"
+                      >
+                        <Phone className="h-3 w-3 inline mr-1" /> {phone}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -119,12 +122,15 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
                 <span className="text-sm text-white/65 leading-relaxed">
-                  3rd Floor, 307, Shagun-11, Above Croma Center, Sector 11, Gandhinagar, Gujarat 382010
+                  309, 3rd Floor, Shagun-11, Above Cosmos Centre, Sector-11, Gandhinagar.
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0" style={{ color: "#A93539" }} />
-                <a href={`tel:${clinic.phoneRaw}`} className="footer-link text-sm">{clinic.phone}</a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:07935852366" className="footer-link text-sm">079-3585 2366</a>
+                  <a href="tel:919978619900" className="footer-link text-sm">99786 19900</a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />

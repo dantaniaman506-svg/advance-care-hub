@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, Calendar, Phone, CheckCircle } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
-import { branches, visitingBranch } from "@/data/branches";
+import { branches, visitingBranch, formatBranchPhones } from "@/data/branches";
 import { services } from "@/data/services";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
@@ -13,21 +13,29 @@ export default function AppointmentPage() {
     branch: "",
     service: "",
     date: "",
-    notes: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const branch = [...branches, visitingBranch].find((b) => b.id === form.branch);
+    const branchPhones =
+      branch && "phone" in branch
+        ? formatBranchPhones(branch)
+        : "To be confirmed on WhatsApp";
     const msg =
-      `Hello! I'd like to book an appointment.\n\n` +
+      `Hello Advance Speech & Hearing Clinic,\n\n` +
+      `I would like to book an appointment.\n\n` +
+      `PATIENT DETAILS\n` +
       `Name: ${form.name}\n` +
-      `Phone: ${form.phone}\n` +
+      `Phone: ${form.phone}\n\n` +
+      `APPOINTMENT DETAILS\n` +
       `Branch: ${branch?.name ?? form.branch}\n` +
+      `Address: ${branch?.address ?? "To be confirmed"}\n` +
+      `Branch contact: ${branchPhones}\n` +
       `Service: ${form.service || "Not specified"}\n` +
-      `Preferred Date: ${form.date || "Flexible"}\n` +
-      (form.notes ? `Notes: ${form.notes}\n` : "");
+      `Preferred date: ${form.date || "Flexible"}\n\n` +
+      `Please confirm the available slot. Thank you.`;
     window.open(whatsappLink(msg), "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
@@ -125,7 +133,7 @@ export default function AppointmentPage() {
                       Open WhatsApp
                     </a>
                     <button
-                      onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", branch: "", service: "", date: "", notes: "" }); }}
+                      onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", branch: "", service: "", date: "" }); }}
                       className="btn-navy text-sm ml-3"
                     >
                       New Booking
@@ -172,7 +180,7 @@ export default function AppointmentPage() {
                           required
                           value={form.branch}
                           onChange={(e) => setForm({ ...form, branch: e.target.value })}
-                          className="form-input appearance-none pr-10"
+                           className="form-input form-select appearance-none pr-10"
                           style={{ cursor: "pointer" }}
                         >
                           <option value="">— Choose your nearest branch —</option>
@@ -192,12 +200,20 @@ export default function AppointmentPage() {
                             borderLeft: "3px solid #A93539",
                           }}
                         >
-                          <p className="font-semibold text-[#1A202C] text-xs mb-0.5">
+                           <p className="font-semibold text-[#1A202C] text-xs mb-1">
                             {[...branches, visitingBranch].find((b) => b.id === form.branch)?.name}
                           </p>
-                          <p className="text-[#54595F] text-xs">
+                           <p className="text-[#54595F] text-xs leading-relaxed">
                             {[...branches, visitingBranch].find((b) => b.id === form.branch)?.address}
                           </p>
+                           {(() => {
+                             const selectedBranch = [...branches, visitingBranch].find((b) => b.id === form.branch);
+                             return selectedBranch && "phone" in selectedBranch ? (
+                               <p className="text-[#A93539] text-xs font-semibold mt-1.5">
+                                 Branch contact: {formatBranchPhones(selectedBranch)}
+                               </p>
+                             ) : null;
+                           })()}
                         </div>
                       )}
                     </div>
@@ -211,7 +227,7 @@ export default function AppointmentPage() {
                         <select
                           value={form.service}
                           onChange={(e) => setForm({ ...form, service: e.target.value })}
-                          className="form-input appearance-none pr-10"
+                           className="form-input form-select appearance-none pr-10"
                           style={{ cursor: "pointer" }}
                         >
                           <option value="">— Select a service (optional) —</option>
@@ -235,19 +251,6 @@ export default function AppointmentPage() {
                         onChange={(e) => setForm({ ...form, date: e.target.value })}
                         className="form-input"
                         min={new Date().toISOString().split("T")[0]}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-[#1A202C] mb-1.5">
-                        Additional Notes
-                      </label>
-                      <textarea
-                        rows={3}
-                        placeholder="Any specific concerns or information you'd like to share..."
-                        value={form.notes}
-                        onChange={(e) => setForm({ ...form, notes: e.target.value })}
-                        className="form-input resize-none"
                       />
                     </div>
 

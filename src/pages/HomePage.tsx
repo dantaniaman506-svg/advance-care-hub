@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Phone, Clock, ArrowRight, CheckCircle, MapPin } from "lucide-react";
-import { clinic, whatsappLink } from "@/data/clinic";
+import { clinic } from "@/data/clinic";
 import { services } from "@/data/services";
-import { branches } from "@/data/branches";
+import { branches, getBranchPhones } from "@/data/branches";
 import HeroSlider from "@/components/HeroSlider";
 import StatsCounter from "@/components/StatsCounter";
 import Reveal from "@/components/Reveal";
@@ -62,14 +62,9 @@ export default function HomePage() {
                 and complete auditory rehabilitation under one roof.
               </p>
               <div className="hero-anim" style={{ animationDelay: "0.52s" }}>
-                <a
-                  href={whatsappLink("Hello! I want to book a consultation.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
+                <Link to="/appointment" className="btn-primary">
                   Book Consultancy
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -143,7 +138,7 @@ export default function HomePage() {
               Advance Speech &amp; Hearing Clinic offers comprehensive hearing
               care services — hearing assessments, hearing aid fitting,
               programming, adjustment, maintenance, and repair — across multiple
-              branches in Gujarat including Ahmedabad, Kanti Nagar, Patan, and
+              branches in Gujarat including Gandhinagar, Ahmedabad, Patan, and
               Surendranagar.
             </p>
             <Link to="/about" className="btn-primary">
@@ -176,14 +171,9 @@ export default function HomePage() {
               worsen hearing — they are carefully programmed for each person's
               unique hearing needs.
             </p>
-            <a
-              href={whatsappLink("Hello! I'd like to book a hearing evaluation.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
+            <Link to="/appointment" className="btn-primary">
               Book a Free Evaluation
-            </a>
+            </Link>
           </Reveal>
           <Reveal delay={120}>
             <div className="grid grid-cols-1 gap-4">
@@ -354,14 +344,9 @@ export default function HomePage() {
               Mansuri
             </p>
           </div>
-          <a
-            href={whatsappLink("Hello! I'd like to book a free hearing consultation.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 btn-navy text-sm"
-          >
+           <Link to="/appointment" className="shrink-0 btn-navy text-sm">
             WhatsApp Us Now
-          </a>
+           </Link>
         </div>
       </section>
 
@@ -392,15 +377,18 @@ export default function HomePage() {
                   <p className="text-sm text-[#54595F] leading-relaxed mb-3">
                     {b.address}
                   </p>
-                  {b.phone && (
-                    <a
-                      href={`tel:${b.phone.replace(/\s/g, "")}`}
-                      className="text-sm font-medium flex items-center gap-1.5 mb-1"
-                      style={{ color: "#A93539" }}
-                    >
-                      <Phone className="h-3.5 w-3.5" /> {b.phone}
-                    </a>
-                  )}
+                   <div className="space-y-1">
+                     {getBranchPhones(b).map((phone) => (
+                       <a
+                         key={phone}
+                         href={`tel:${phone.replace(/\D/g, "")}`}
+                         className="text-sm font-medium flex items-center gap-1.5"
+                         style={{ color: "#A93539" }}
+                       >
+                         <Phone className="h-3.5 w-3.5" /> {phone}
+                       </a>
+                     ))}
+                   </div>
                   <div className="text-xs text-[#718096] flex items-center gap-1.5 mt-2">
                     <Clock className="h-3 w-3" style={{ color: "#A93539" }} />
                     Open Mon – Sat — Closes 7 PM
@@ -440,14 +428,12 @@ export default function HomePage() {
               <Link to="/appointment" className="btn-navy">
                 Book Appointment
               </Link>
-              <a
-                href={whatsappLink("Hello! I'd like to enquire about an appointment.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white/50 text-white font-semibold text-sm hover:border-white hover:bg-white/10 transition-colors"
-              >
+               <Link
+                 to="/appointment"
+                 className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white/50 text-white font-semibold text-sm hover:border-white hover:bg-white/10 transition-colors"
+               >
                 WhatsApp Us
-              </a>
+               </Link>
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -455,7 +441,7 @@ export default function HomePage() {
               {[
                 {
                   title: "4 Locations",
-                  desc: "Ahmedabad, Kanti Nagar, Patan & Surendranagar",
+                  desc: "Gandhinagar, Ahmedabad, Patan & Surendranagar",
                 },
                 {
                   title: "Open 6 Days",

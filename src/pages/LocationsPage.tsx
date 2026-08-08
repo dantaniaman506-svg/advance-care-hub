@@ -1,5 +1,5 @@
 import { MapPin, Phone, Clock, Navigation } from "lucide-react";
-import { branches } from "@/data/branches";
+import { branches, getBranchPhones } from "@/data/branches";
 import { clinic } from "@/data/clinic";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 export default function LocationsPage() {
   return (
     <>
-      <PageBanner
+       <PageBanner
         title="Our Locations"
-        subtitle="Ahmedabad, Kanti Nagar, Patan & Surendranagar"
+        subtitle="Gandhinagar, Ahmedabad, Patan & Surendranagar"
         breadcrumb={[{ label: "Locations" }]}
       />
 
@@ -58,17 +58,20 @@ export default function LocationsPage() {
                         <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
                         <p className="text-sm text-[#54595F] leading-relaxed">{branch.address}</p>
                       </div>
-                      {branch.phone && (
-                        <div className="flex items-center gap-3">
-                          <Phone className="h-4 w-4 shrink-0" style={{ color: "#A93539" }} />
-                          <a
-                            href={`tel:${branch.phone.replace(/\s/g, "")}`}
-                            className="text-sm font-medium hover:text-[#A93539] transition-colors"
-                          >
-                            {branch.phone}
-                          </a>
+                      <div className="flex items-start gap-3">
+                        <Phone className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "#A93539" }} />
+                        <div className="flex flex-col gap-1">
+                          {getBranchPhones(branch).map((phone) => (
+                            <a
+                              key={phone}
+                              href={`tel:${phone.replace(/\D/g, "")}`}
+                              className="text-sm font-medium hover:text-[#A93539] transition-colors"
+                            >
+                              {phone}
+                            </a>
+                          ))}
                         </div>
-                      )}
+                      </div>
                       <div className="flex items-center gap-3">
                         <Phone className="h-4 w-4 shrink-0" style={{ color: "#A93539" }} />
                         <a

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Phone, MapPin, Clock, Send, ChevronDown, CheckCircle } from "lucide-react";
 import { clinic, whatsappLink } from "@/data/clinic";
-import { branches, visitingBranch } from "@/data/branches";
+import { branches, visitingBranch, formatBranchPhones } from "@/data/branches";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 
@@ -20,12 +20,17 @@ export default function ContactPage() {
     e.preventDefault();
     const branch = [...branches, visitingBranch].find((b) => b.id === form.branch);
     const message =
-      `Hello! I'd like to enquire about the clinic.\n\n` +
+      `Hello Advance Speech & Hearing Clinic,\n\n` +
+      `I would like to enquire about your services.\n\n` +
+      `CONTACT DETAILS\n` +
       `Name: ${form.name}\n` +
-      `Phone: ${form.phone}\n` +
+      `Phone: ${form.phone}\n\n` +
+      `BRANCH DETAILS\n` +
       `Branch: ${branch?.name ?? form.branch}\n` +
       `Address: ${branch?.address ?? "Not specified"}\n` +
-      (form.message ? `Message: ${form.message}\n` : "");
+      `Branch contact: ${branch && "phone" in branch ? formatBranchPhones(branch) : "To be confirmed on WhatsApp"}\n\n` +
+      (form.message ? `Message: ${form.message}\n\n` : "") +
+      `Please get back to me. Thank you.`;
     window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
@@ -56,14 +61,17 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-[#1A202C] text-sm mb-0.5">{headOffice.name}</p>
                     <p className="text-sm text-[#54595F] leading-relaxed">{headOffice.address}</p>
-                    {headOffice.phone && (
-                      <a
-                        href={`tel:${headOffice.phone.replace(/\s/g, "")}`}
-                        className="text-sm text-[#A93539] hover:underline"
-                      >
-                        Branch: {headOffice.phone}
-                      </a>
-                    )}
+                    <div className="flex flex-col gap-1 mt-1">
+                      {formatBranchPhones(headOffice).split(" · ").map((phone) => (
+                        <a
+                          key={phone}
+                          href={`tel:${phone.replace(/\D/g, "")}`}
+                          className="text-sm text-[#A93539] hover:underline"
+                        >
+                          Branch: {phone}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -147,7 +155,7 @@ export default function ContactPage() {
                       <strong>{clinic.phone}</strong>.
                     </p>
                     <button
-                      onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", branch: "", message: "" }); }}
+                       onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", branch: "", message: "" }); }}
                       className="btn-primary mt-6 text-sm"
                     >
                       Send Another Message
@@ -194,13 +202,13 @@ export default function ContactPage() {
                           required
                           value={form.branch}
                           onChange={(e) => setForm({ ...form, branch: e.target.value })}
-                          className="form-input appearance-none pr-10"
+                           className="form-input form-select appearance-none pr-10"
                           style={{ cursor: "pointer" }}
                         >
                           <option value="">— Choose your nearest branch —</option>
-                          {[...branches, visitingBranch].map((b) => (
+                           {[...branches, visitingBranch].map((b) => (
                             <option key={b.id} value={b.id}>
-                              {b.name} — {b.address}
+                              {b.name}
                             </option>
                           ))}
                         </select>
@@ -208,11 +216,23 @@ export default function ContactPage() {
                       </div>
                       {form.branch && (
                         <div
-                          className="mt-2 p-3 text-sm text-white"
-                          style={{ backgroundColor: "#1A202C" }}
+                           className="mt-2 p-4 text-sm"
+                           style={{ backgroundColor: "#EDF2F7", borderLeft: "3px solid #A93539" }}
                         >
-                          <strong>Selected:</strong>{" "}
-                          {[...branches, visitingBranch].find((b) => b.id === form.branch)?.address}
+                           <p className="font-semibold text-[#1A202C] text-xs mb-1">
+                             {[...branches, visitingBranch].find((b) => b.id === form.branch)?.name}
+                           </p>
+                           <p className="text-[#54595F] text-xs leading-relaxed">
+                             {[...branches, visitingBranch].find((b) => b.id === form.branch)?.address}
+                           </p>
+                           {(() => {
+                             const selectedBranch = [...branches, visitingBranch].find((b) => b.id === form.branch);
+                             return selectedBranch && "phone" in selectedBranch ? (
+                               <p className="text-[#A93539] text-xs font-semibold mt-1.5">
+                                 Branch contact: {formatBranchPhones(selectedBranch)}
+                               </p>
+                             ) : null;
+                           })()}
                         </div>
                       )}
                     </div>
